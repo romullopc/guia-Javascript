@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.guia/style.css">
+</head>
+<body>
+    <h1>Java Scripit</h1>
+
+    <div id="maior">      
+        <div id="segunda">
+            <h2>javaScript puro!</h2>
+                <p><code>console.log('xxx')</code> --- método grava (registra) uma mensagem no console; útil para fins de teste.</p>
+                <p><code>xxx = newDate()</code>  --- Busca no sistema operacional do Pc 'horas' em tempo realmente</p>
+                <p><code>yyy = xxx.getHours()</code> --- após criar newDate(), podemos navegar no sistema do pc para encontrar horários específicos com get.xxx().</p>
+            <h2>Códigos</h2>
+                <p><code> // </code> --- Comentário em 'linha única'.</p>
+                <p><code> /* */</code> --- Comentário de parágrafos</p>
+                <p><code>inner.Text</code> ---  é uma propriedade que define o conteúdo de texto desse elemento. (não formatado)</p>
+                <p><code>x.inner.HTML</code> --- Retornar o texto (formatado como 'tag', não 'CSS') da palavra reservada, (x).</p>
+                <p><code> window.altert('xxx')</code>  ---  Método mensagem de alert!</p>
+                <p><code> window.confirm('xxx')</code> --- Método opção de selecão alrt!</p>
+                <p><code> Window.prompt('xxx')</code> --- Método responder algo na caixa alert!</p>
+                <p><code>document.write(`xxx`)</code> ---Método escrever algo no <i>body</i> do documento html.</p>
+                <p><code>var p1 = window.document.getElementsByTagName('p')[0]</code> ---  encontrando o primeiro elemento de parágrafo na página HTML e armazenando uma referência a ele na variável p1. Se não houver nenhum elemento de parágrafo na página, p1 será <i>undefined</i>.</p> 
+        </div>   
+        <div id="segunda">
+            <h2>Variáveis</h2>
+            <br>
+                <h3>template String</h3>
+                    <p>é uma forma moderna de declarar string, que permite a interpolação de expressões e a criação de string multilinha.</p>
+                    <p>sintaxe: </p>
+                    <code class="codigo">var a = 5;</code>
+                    <code class="codigo">var b = 10;</code>
+                    <code class="codigo">console.log(`a soma das variáveis é: ${a+b}`)</code>
+                    <p>a sintaxe da template string é a alternação <b>do acento aspas</b> para o <b>acento grave</b>, e quando for interpolar o texto para a variável, utiliza o sinal <b>${x}</b>.</p>
+                    <br>
+                    <hr>
+                <h3>Tipos primitivos primordiais</h3>
+                    <br>
+                    <p><code>typeof xxx</code> --- indentica qual tipo primitivo da variavel selecionada.</p>
+                    <p><code>Númerais</code> --- 1 2 3,  -1 -2 -3,  1.1 1.2 1.3</p>
+                    <p><code>Number(n)</code> --- converte <i>var </i>para <i>número de forma genérica. (ES6)</i></p>
+                    <p><code>var.toFixed(2) </code> --- acrescentar um <i>.</i> após a <i>var</i> e conta quantas casas desejar.</p>
+                    <p><code>var.toFixed(2).replace('.', ',')</code> --- para trocar o <i>.</i> por <i>,</i> em números reais.</p>
+                    <p><code>Number.parseInt(n)</code> --- converter <i>var</i> para <i>números ineiros</i></p>
+                    <p><code>Number.parseFloat(n)</code> --- converter <i>var</i> para <i>números reais</i>.</p>
+                    <p><code>String </code> --- Variáveis com sequências de caracteres, (numerais ou letras).</p>
+                    <p><code>String(n)</code> --- converte <i>números</i> para <i>String de forma genérica. (ES6)</i></p>
+                    <p><code>` xxx ${var} xxx`</code> --- <i>Template string</i> forma mais limpla de escrever a <i>var</i> para o usuário. <i>(ES6)</i></p>
+                    <P><code>var.length</code> --- quantos <i>caracteres</i> a <i>String</i> tem.</P>
+                    <p><code>var.toUpperCase()</code> --- Formatação da <i>string;</i> tudo para <i>MAIÚSCULA</i></p>
+                
+                    <p><code>vat.toLowerCase()</code> --- Formatação da <i>string.</i> tudo para <i>minúscula</i></p>
+                    <p><code>Booleans</code> --- condicionais (True and False).</p>
+                    <p> Podem começar com <code>Letra</code>, <code>$</code> ou <code>_</code></p>
+                    <p><code>não </code> podem começar com <code>número</code>.</p>
+                    <p> É possível usar <code>letras</code> e <code>números.</code> (letras maiúsculas fazem, diferença!).</p>
+                    <p> É possivel <code>acentos</code> e <code>símbulo.s</code></p>
+                    <p><code>Não</code> podem conter <code>espaços.</code></p>
+                    <p><code>Não</code> podem ser <code>palavras reservadas.</code></p>
+                    <p><code> = </code> --- atribui valor à variavel.</p>
+                    <p><code> + </code> --- usado para concatenar string + variável. Caso queira usar como sinal de adição, tera que connverter <code>string</code> para <code>number.</code></p>
+                    <br>
+                    <p><code> var (nome da var) = window.prompt('xxx')</code> --- Atribui a variável ao alert.</p>
+            <h2>Operadores aritiméticos</h2>
+                <p>operadores aritiméticos > operadores relacionais > operadores Lógicos</p>
+                <br>
+                <h3>Precedência aritimética</h3>
+                    <br>
+                    <p><code> ()</code> --- Primeiro</p>
+                    <p><code> ** </code>--- Segundo </p>
+                    <p><code> * / % </code> --- Terceiro (quando houver uma expressão, resolução da esquerda pra direita).</p>
+                    <p><code> + - </code> --- Quarto</p>
+                    <br>
+                <h3>atribuição simplificada</h3>
+                    <br>
+                    <p><code>var num = num % 2 </code> --- Quando for atribuir valor na mesma variavel ja declarada podemos simplicar a sintaxe.</p>
+                    <p><code>var num %= 2</code> --- esta sintaxe simplificada atribui o mesmo valor do exemplo acima.</p>
+                    <p><code> x++ </code> --- <i>Pós incremento</i>; incrementa um valor após o teste lógico, (testar no <i>console.log</i>)</p>
+                    <p><code> ++x </code> --- <i>Pré incrementa</i>; incrementa um valor antes do teste lógico, (testar no <i>console.log</i>)</p>
+                    <p><code> let x = -n</code> --- <i>operador de inversão (-)</i> inverte o valor da variavel</p>
+                    <p><code>resp = (num%2 ? "par" : "impar") ---</code> .</p>
+                    <br>
+                <h3>Operadores relacionais</h3>
+                    <br>
+                    <p>Entre os operadores relacionas não há uma ordem de precedência; sempre terão como resposta entre dos valores <i>(true or False)</i>; também conhecido como valores <i>Booleanos</i>.</p>
+                    <p><code>></code> --- Maior</p>
+                    <p><code><</code> --- Menor</p>
+                    <p><code>>=</code> --- Maior ou igual</p>
+                    <p><code><=</code> --- Menor ou igual</p>
+                    <p><code>==</code> --- Igualdade <i>(diferente de '=' pois é o sinal de atribuição).</i></p>
+                    <p><code>!=</code> --- Diferente</p>
+                    <br>
+                    <h4>Curiosidade</h4>
+                        <br>
+                        <p>o opderador aritimético <code>'=='</code> é bem flexivel quando se trata de <i>identidade</i> obs.:</p>
+                        <p><code>5 ==  5  True</code> --- pois realmente 5 é igual à cinco!</p>
+                        <p><code>5 == '5' True</code> --- este operador relacional <i>(igualdade) </i> não analisa a <i>Tipagem dos dados.</i> </p>
+                        <p><code>5 === '5' True</code> --- Neste caso o operador relacional entende como o tipo de dade <i> (Idêntico).</i> </p>
+                        <br>
+                <h3>Operadores Lógicos</h3>
+                    <br>
+                    <p>precedência dos operadores lógicos: <code>!</code> > <code> && </code> > <code> ||</code></p>
+                    <p>sempre terão como resposta entre dos valores <i>(true or False)</i>; também conhecido como valores <i>Booleanos</i>.</p>
+                    <p><code>!</code> --- Negação; ou seja, se a operação for verdadeira <i>(False)</i>, se a operação for falsa <i>(True)</i>.</p>
+                    <p><code>&&</code> --- Conjunção. Quando a operação exige mais de uma condição, e as duas tem que ser executadas para se tornar <i>(True)</i>.</p>
+                    <p><code>||</code> --- Disjunção. Quando a operação exige que apenas uma das condições seja executadas para se tornar <i>(True)</i><div class=""></div></p>
+                    <br>
+                <h3>Operadores Ternário</h3>
+                    <br>
+                    <p><i>operação Ternária (?)</i>; é um teste lógico que retorna "true" : "false", se o resultado for 1 é 'true'; se o resultado for 2 é 'false'</p>
+                    <p><code>var resposta = idade >= 18 ? 'maior' : 'menor'</code></p>
+                    <p><code> ' ? ' </code>Primeiro: analisar o teste que foi lhe dado (todo cálculo que antecede o ponto de <i>interrogação</i>).</p>
+                    <p><code>' : ' </code> Segundo: executando o cálculo, poderemos receber dois tipos de resultado <i>(True or False)</i>, ambos, respectivamente, separados por dois pontos <code>' : '</code></p>
+                    <p>Se o resultado for <code>(True)</code> atribuirá os dados que <code>antecedem  ' : '</code></p>
+                    <p>Senão, se o resultado for <code>(False)</code> atribuirá os dados que <code>precedem ' : '</code> </p>
+                    <p><code>!() ---- </code> negação, inverte o teste lógico.</p>
+                    <br>
+            <h2>DOM (Document Object Model)</h3>
+                <p> o DOM é o INTERMEDIADOR da COMUNICAÇÃO da linguagem JavaScript com as tecnologias HTML5 e CSS3.</p>
+                <p>saiba mais <a href="https://www.alura.com.br/artigos/o-que-e-o-dom?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=aud-456779235794:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQiAtaOtBhCwARIsAN_x-3KMlOx0ymL8ISqRoHFMZrVJHbdhuBNyM-RgEBMrsKRag9zPn4SnKKEaAgVnEALw_wcB" target="_blank" rel="external"> Clique aqui!</a></p>
+                <br>
+                <p><i>Elements</i> --- Tudo constitui um <i>document html</i>; Quando manipulado também é conhecido como <i>object</i>.</p>
+                <p><i>parent</i> --- Também conhecido como elemento <i>pai</i>, representa os maiores títulos de hierarquia num documento html; exemplo, <i>html</i> é <i>parent</i> de <i>head</i> e <i>body</i>.</p>
+                <p><i>child</i> --- Também conhecido como elemento <i>filho</i>, pois representa títulos subjacentes na hierarquia de um documento html; por exemplo, <i>title</i> é <i>child</i> de <i>head</i>.</p>
+                <p></p>
+                <p><code>elemento=  el.target --- </code>Após criar uma Arrow Function, percorra pelo valor, para manipular o elemento capturado.</p>
+                <p><code>x.style.atibuto = 'valor'</code> --- Após declarar uma <i>var</i> atravez do DOM, poderá manipular as CSS do document html.</p>
+                <br>
+                <h3 class="secundario">Manipulação de objetos DOM</h3>
+                    <br>
+                <h3>por Marca (TagName)</h3>
+                    <p>uma forma de manipular inúmeras <i>'tags'.</i> de forma genérica.</p>
+                    <p>sintaxe: <code class="codigo">const elemento = document.GetElementsByTagName('x')[x]</code></p>
+                    <p>passo 1 --- declarar a constante e atribuir ao elemento que deseja manipular.(tag object)</p>
+                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                    <p>passo 3 --- entre parênteses informe quais <code>tag's</code> serão manipuladas. (manipulação por MARCA trabalha com inúmeras tag's)</p>
+                    <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
+                    <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
+                    <br>
+                <h3>por ID</h3>
+                    <p>manipular DOM por ID (único)</p>
+                    <p>sintaxe: <code class="codigo">const elemento = document.GetElementById('x')</code></p>
+                    <p>passo 1 --- declarar a var e o elemento que deseja manipular.(ID tag)</p>
+                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                    <p>passo 3 --- entre parênteses informe qual <code> O ID da tag</code> que será manipulada. (manipulação por ID é única.)</p>
+                    <p>const novoElemento =<code> document.createElement("div")</code> --- criar um elemento com a tag "DIV" e atribuir a uma constante. </p>
+                    <p>novoElemento<code> .setAttributte ('id', 'nome do id')</code> --- adicionar ou alterar qualque atributos de um elemento criado.</p>
+                    <br>
+                <h3>por Class</h3>
+                    <p>manipular DOM por Class (multiplas 'tag') </p>
+                    <p><code class="codigo">getElementsByClassName('x')[x]</code></p>
+                    <p>passo 1 --- declarar a var e o elemento que deseja manipular e criar uma classe, um elemento pode conter mais de uma classe.</p>
+                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                    <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Class são genéricas.)</p>
+                    <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
+                    <p>passo 5 --- caso retornar uma classe com mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
+                    <br>
+                    <h4>atributos de classes</h4>
+                        <p><code>x.classlist.add("c2") --- </code> Para adicionar a classe "c2" ao elemento "x" </p>
+                        <p><code>x.classelist.remove("c2") --- </code>Para remover a classe "c2" do element"x"</p>
+                        <p><code>x.classe.toggle("c2")--- Alternar ? ativar uma função durante o funcionamento da chamadA ? <- aprofundamento JQuery </code></p>
+                        <br>
+                <h3>por Name</h3>
+                    <p>manipular DOM por Name (multiplas'tag') </p>
+                    <p>sintaxe: <code class="codigo">const elemento = document.GetElementsByName('x')[x]</code></p>
+                    <p>passo 1 --- declarar a constante e atribuir o elemento que deseja manipular.(name tag)</p>
+                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                    <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Name são genéricas.)</p>
+                    <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
+                    <br>
+                <h3>por Selector</h3>
+                    <p><code class="codigo">querySelector</code> ---  é um método mais dinâmico permitindo trabalhar com diversos atributos</p>
+                    <br>
+                    <p>passo 1 --- declarar a var e o elemento que deseja manipular.(selector tag)</p>
+                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                    <p>passo 3 --- entre parênteses informe quais <code>tag's (class ou Id)</code> seram manipuladas. (observar a pontuação, e extender com o <i>valor</i> da class ou Id)</p>
+                    <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
+                    <p>passo 6 --- caso deseja manipular uma tag específica dentro as multiplas tag's, utilize <b>[x]</b>.</p>
+                    <br>
+                    <p><code>("div") --- </code> método que trabalha com o primeiro elemento da tag mencionada, para manipular um elemento específico utilize <b>[x]</b>.</p>
+                    <p><code>(".class") --- </code>método que trabalha com os elementos por classe.</p>
+                    <p><code>("#id") --- </code>método que trabalha com elementos por id.</p>
+                    <p><code>("div[.class]") --- </code>método que trabalha com todos elementos <i>div</i> que possuem o <i>atributo class</i>.</p>
+                    <p><code>("div>p") --- </code>método para manipular todas as <i>Tag 'p'</i> que estão incluídas na <i>Tag 'div'</i></p>
+                    <p><code>('.classe:not(.outraClasse)') --- </code>sintaxe para manipular elemento que possui a ".classe", e não posssuem "outraClasse"</p>
+                    <p><code>("input[type=radio]") --- </code>Sintaxa para manipular elemento que possui um input tipo radio.</p>
+                                        <br>
+                <h3>hierarquia DOM</h3>
+                    <p>o DOM organiza a estrutura da página em uma árvore de elementos, permitindo que você acesse e manipule cada parte do documento usando JavaScript, possibilitando a orientação para manipulação de elementos a partir de sua posição hierárquica.</p>
+                    <p><code>Document --- </code> Objeto raiz da página, que representa todo o documento.</p>
+                    <p><code>Elements --- </code>Representam as tags HTML; são blocos de construção da estrutura da página.</p>
+                    <p><code>Attributes --- </code>São propriedades que os elementos podem ter, permitem definir caracteristicas que os elementos podem conter.</p>
+                    <p><code>Text --- </code>Representam os conteúdos textual dentro das tags, podem ser acessados usando as propriedades TextContent ou innerText.</p>
+                    <p><code>comentários e utros tipos --- </code> Além dos elementos e atributos o DOM também incui outros tipos de nós, como comentarios e declaração de tipo de documento "!DOCTYPE html"</p>
+                    <hr>
+                    <p><code>parent --- </code> "Elemento pai", elemento de maior referência quando se trata de hierarquia DOM.</p>
+                    <p><code>children --- </code>"Elemento filho", elemento contido dentro de outro. (elementos filhos recebem classes e propriedades do elemento pai.)</p> 
+                    <p><code>sibling --- </code>"Elementos irmãos", elemento de mesma referência na hierarquia DOM</p>
+                    <br>
+                <h3>propriedades</h3>
+                    <p><code>childNodes: --- </code>Propriedade que retorna um NodeList() com a quantidade de nós que o elemento faz, (incluindo textos e comentários.)</p>
+                    <p><code>children: --- </code> Propriedade que retorna um HTMLCollection() com a quantidade de elementos filhos(child).</p>
+                    <p><code>firstElementChild: --- </code>Propriedade que retorna o primeiro elemento filho encontrado; relacionado ao elemento selecionado. </p>
+                    <p><code>lastElementChild: --- </code> Propriedade que retorna o último elemento filho encontrado; relacionado ao elemento selecionado.</p>
+                    <p><code>nextElementSibling: --- </code> Propriedade que retorna o póximo elemento de mesma "hierarquia", (elementos irmãos).</p>
+                    <p><code>previousSibling ---</code> Propriedade que retorna o nó que precede o nó especificado na lista de childNodes do nó pai, retorna null se o nó especificado for o primeiro desta lista.</p>
+                    <p><code>parentElement: --- </code> Propriedade que retorna o elemento Parent; relacionado ao elemento selecionado. </p>
+                    <p><code>insertBefore(novoElemento, elementoDeReferência) --- </code> inserir novo elemento antes do nó de referência</p>
+                    <p><code>insertBefore(novoElemento, elementoDeReferência.nextSinbling) --- </code> inserir novo elemento antes do nó de referência(observe que a referência é o próximo irmão)  </p>
+                    <p><code>.hasChildNodes() ---</code> Método que retorna ture ou false (teste lógico ou Booleanos), caso o elemento tiver "filhos".</p>
+                    <blockquote>
+                        <p>.hasChildNodes() não é um método muito eficas , pois, retornam 'true' contando os nós de textos.</p>
+                        <p>melhor forma é uma estrutura condicional 'ternária',</p>
+                    </blockquote>
+                    <br>
+            <h2>criar elementos HTML pelo javaScript</h2>
+                <br>
+                <p>sintaxe: <code class="codigo">const criarElemento = document.createEelement('element HTML')</code></p>
+                <blockquote>
+                    <p>º atribuir o elemento à uma variável, possibilitando sua manipulação.</p>
+                    <p>º atravez de métodos e atributos, adicione forma ao elemento.</p>
+                    <p>º com o método .appendChild(), anexe o elemento criado ao 'Parent' desejado.</p>
+                </blockquote>
+                <hr>
+                <h3>propriedades bastante utilizadas</h3>
+                    <p><code>innerText ou innerHTML= " " ---</code>adicionar ou alterar texto do elemento</p>   
+                    <br>
+                <h3>métodos bastante utilizadas</h3>
+                    <p><code>.setAttribute('atributo', 'valor') ---</code>adicionar atributos no elemento criado pelo JavaScript</p>
+                    <p><code>.appendChild( ) --- </code>anexar um elemento filho ao 'Parent' desejado.</p>
+                    <p><code>.removeChild( ) ---</code>remover elemento filho em relação ao elemento 'Parent' (utilizar no    evento de click)</p>
+                    <p><code>.remove() --- </code> remover elemento diretamente pela variável atribuída.</p>
+                    <p><code>.toUpperCase() ---</code>Converte uma string para todas as letras maiúsculas; este método não altera seu valor original, apenas retorna uma outra string com caracteres maíusculs. </p>
+                        <blockquote><p>importante observar como se comporta os valor no retorno de uma estrutura condicional; ¿array se comporta como string?</p></blockquote>
+                    <br>
+                    <hr>
+            <h2>Estrutura de repeição</h2>
+                <p>Tecnicamente chamado de iteração, é utilizado para repetir um bloco de comando de acordo com a necessidade.</p>
+                <blockquote>
+                    <p><b>const string = it_string[symbol.iterator] --- </b> propriedade que transforma um objeto em um elemento iterável.</p>
+                    <p><b>.next() --- </b>método que prosssegui o próximo valor iteravel do objeto, caso obetenha sucesso, o console printa <b>"done: false" e o valor do elemento iterado.</b></p>
+                    <p>caso a coleção iterável chegue ao fim, o console printa <b>"done: true" e o valor do elemento é undefined</b></p>
+                </blockquote>
+                <br>
+                <h3>For</h3>
+                    <p>estrutura de repetição <i>DEFINIDO</i>, ou seja, é usado quando sabemos a quantidade de vezes que o bloco será iterado.</p>
+                <h3>While</h3>     
+                    <p>Estrutua de repetição <i>INDEFINIDA</i>, ou seja, o usuário decide a quantidade de iteração; Traduzida como <i>'enquanto'</i> executa suas instruções com o teste lógico <strong>ANTES</strong> de executar a tarefa, desde que uma condição seja satisfeita.</p>
+                <h3>DoWhile</h3>
+                    <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
+            <h2>Estrutura condicionais</h2>
+                <p>avalia uma condição, para que um bloco de instruções seja interpretada.</p>
+                <h3>If, Else if, else</h3>
+                    <p>condição composta que avalia uma condição, caso não seja satisfeita, avalia a proxima; e assim por diante...</p>
+                <h3>Switch</h3>
+                    <p>condicionais que trabalha com diferentes possibilidades de variáveis, gerando uma ampla possibilidades de casos.</p>
+                    <p><code>case 1: case 2: case3:</code> blocos de códigos guardado dentro de uma variável <code>case x:</code>, caso conveniente, execute a variável que lhe satisfaça</p>
+                    <p><code>break ---</code> comando que finaliza a leitura de um bloco de código <code>case X:</code>, caso ignorado, o programa continuará lendo o próximo bloco até encontrar um comando <i>break ou default</i></p>
+                    <p><code>default ---</code> comando que finaliza as condições, caso nenhuma das condições seja satisfeita.</p>
+            <h2>Funções</h2>
+                <p>Quando um projeto começa a crescer, prescisamos de <i>Organização, Gerenciamento e Reusabilidade</i>; Portanto preecisamos reutilizar nosso código sem ter que ficar reesceevendo, neste contexto utilizamos as fuções.</p>
+                <br>
+                <p><i>function  --- </i> são chamada de execução de blocos; Mas para função chamar um bloco, ela pode ser nomeada ou ser anônima.</p>
+                <p><i>Bloco</i> --- </i> Conjunto de linhas de código Js que retorna o valor para uma função. os <i>'blocos' são delimitado por 'chaves' {}</i></p>
+                <p><i>return --- </i> toda função necessita de apenas um <i>return</i>, pode ser em forma de string, numeral ou até mesmo retornar uma variável representando a resposta da função.</p>
+                <p><i>NaN --- </i> mensagem de erro 'Not a Number'; Significa que em alguma operação, há um número sem valor definido.</p>     
+                <br>
+                <h3>Função Simples</h3>
+                    <p>função declarada que necessita de uma chamada.</p>
+                    <br>
+                    <p><code class="codigo">Funciton nome(parâmetro){bloco}</code></p>
+                    <p><b>declaração da função - </b> por si, não executa a função, necessita da <b>chamada da função</b> para executar e retornar a função</p>
+                    <p><b>chamada da função - </b> para a função declarada executar, a chamada da função é essencial, contendo parâmetros que sera usada para orienta-la</p>
+                    <p><b>retorno - </b> o retorno é o resultado da execução da função, cada função retornará apenas 1 valor</p>
+                    <blockquote>
+                        <p>há possibilidade de usar uma única função para diferentes chamadas, evitando duplicar códigos</p>
+                    </blockquote>
+                    <br>
+                <h3>Funções Anônimas</h3>
+                    <p>Também conhecida como<i>"funções em tempos de execução"</i>, são Funções que omitem o nome, e atribuída á uma variável, pois ela só é criada quando é chamada; ou seja, ela não ocupa um espaço na memória, ela só exestirá a partir da execução da variável atribuída</p>
+                    <br>
+                    <p>sintaxe: <code class="codigo"> const funçãoAnoniama = function(parâmetros){return}</code></p>
+                    <br>
+                    <h4>Arrow function</h4>
+                        <p>expressões arrow function também é uma função anônima criada a partir da ES6, que viabiliza uma forma mais consisa de codar.</p>
+                        <p>sintaxa: <code class="codigo"> const arrowFuncition = (parâmetros)=>{bloco return}</code></p>
+                        <blockquote>
+                            <p>° atribuir a função a uma 'variável'</p>
+                            <p>° omitir o nome da função e a palavra function</p>
+                            <p>º quando há apenas 1 parâmetro e o retorno for simples, omitir os parêntes e também as chaves. (conferir no meu repositório)</p>
+                        </blockquote>
+                        <br>
+                     <h4>constructor function</h4>
+                        <p>tipo de expressão anônima cujo o objetivo é criar funções com retorno simples.</p>
+                        <p>sintaxe: <code class="codigo">const functionConstructor = new Function('v1', 'v1', 'v3', 'return v1+v2+v3')</code></p>
+                        <blockquote>
+                            <p>° atribuir a função a uma 'variável'.</p>
+                            <p>° para declarar a função escreva 'new Function' (com F MAIÚSCULO).</p>
+                            <P>° separar os parâmetros com aspas e virgulas.</P>
+                            <p>° após a declaração do parâmetros, escreva return e a expressão desejada</p>
+                        </blockquote>
+                        <br>
+                <h3>função REST</h3>
+                    <p>função com mais de 2 parâmetros</p>
+                    <p><code class="codigo">function name(...valores){bloco}</code><p>
+                    <p><code>parâmetros --- </code>Para trabalhar com função com mais de 2 parâmetros precisamos trabalhar com o operador spread[...]</p>
+                    <blockquote>    
+                        <p>operador spread transformará os parâmetros em um ARRAY.</p>
+                        <P>para percorrer por todos os elemens do array, usar o loop (<code>for of</code>), pois, é a forma mais recomandada a trabalhar com valores em um Array.</P>
+                    </blockquote>
+                    <br>
+                <h3>Função geradora</h3>
+                    <p>É o pilar da programação assincrona, diferente das outras funções, a fução geradora pode interromper o processo e retornar um valor assim que for satisfeito.</p>
+                    <p>A declaração <b>function*</b>define uma função geradora (generator function), a própria função retorna um objeto Generator durante sua execução.</p>
+                    <p>exemplo.: <code class="codigo">function* contador(){bloco}</code></p>
+                    <p><code>const funçãoGeradora= contador() ---</code> para manipular a função geradora é necessario atribui-lá à uma variável.</p>
+                    <p>contador<code>.next().value --- </code> Método de chamada da função, com o objetivo de retornar a execução a partir do Yield encerrado.</p>
+                    <p><code>yield ---</code> é o ponto que caracteriza o retorno da função geradora, toda vez que chamado, a própria função encerra e retorna um valor; Da próxima vez que executado, retorna do ponto onde foi interrompido.</p>
+                    <blockquote>
+                        <p>° há possibilidade de atribuir o Yield a uma variável.<i>(repositório FunçãoGeradora.parte2).</i></p>
+                        <p>° importante o atributo <b>.value</b> para retorno do valor do yield.</p>
+                        <p>° há diferentes métodos de percorer uma função geradora, importante perceber qual melhor forma de retornar o Yield.</p>
+                    </blockquote>
+                    <br>
+            <h2>Eventos</h2>
+                <br>
+                <p>Eventos são interações do usuário com elementos html, invocando uma <i>Rotina JavaScripit</i>, em resposta ao mesmo específicado.</p>
+                <p>sintaxe de evento disparado <b>diretamente no documento HTML:</b></p>
+                <code class="codigo">onclick="alert("olá mundo!")"</code>
+                <blockquote>
+                    <p><b>ONclick - </b>Quando o evento comçar com <i>on</i> o método é inserido diretamente no HTML  <i>(não recomendado)</i></p>   
+                </blockquote>
+                <br>
+                <h3>EventListener</h3>
+                    <p>Ouvidores de eventos que disparam funções.</p>
+                    <p>sintaxe do método de ouvidores <b>chamando uma função já declarada:</b> </p>
+                    <p><code class="codigo">elemento.addEventListener("click", msg)</code></p>
+                    <blockquote>
+                        <p>1ª parte é a variável atribuída ao elemento a ser manipulado, após o ponto é o método de ouvidores de eventos.</p>
+                        <p>2º, dentro dos parênteses a primeira parte é o tipo de evento a ser disparado; após a virgula, o tipo de função que deseja disparar.</p>
+                        <p>obs.: lembrar que a declaração da função deve ser antes da chamada!!</p>
+                    </blockquote>
+                    <hr>
+                    <p>sintaxe <b>chamando a função diretamente nos ouvidores: </b></p>
+                    <code class="codigo">elemento.addEventListener('click', (evt)=>{evt.targert</code>
+                    <p><code class="codigo">const el= evt.target }) </code> </p>
+                    <blockquote>
+                        <p>1ª parte é a variável atribuída ao elemento a ser manipulado, após o ponto é o método de ouvidores de eventos.</p>
+                        <p>2º, dentro dos parênteses a primeira parte é o tipo de evento a ser disparado; após a virgula, uma ArrowFunction cria a própria função dentro do método addEventListener.</p>
+                    </blockquote>
+                    <p><b>evt.target ---</b> atributo para capturar o elemento (boas praticas: imprimir no console e verificar no Devtolls) </p>
+                    <p><b>const el= evt.target --- </b>atribuir o elemento capturado a uma variável, assim, permitindo a manipulação do elemento.</p>
+                    <blockquote>
+                        <p>caso esteja trabalhando com Array, utilize o método map() para percorrer os elementos, assim, possibilitando a manipulação.</p>
+                    </blockquote> 
+                <hr>
+                <h3>Tipos de eventos:</h3>
+                    <br>
+                    <h4>Mouse</h4>
+
+                        <p>toda ação que ocorre com mouse ao ter contato com uma função já nomeada. Para mais <i>eventos de mouse</i><a href="https://desenvolvimentoparaweb.com/javascript/eventos-javascript/" target="_blank" rel="external"> Clique aqui!</a></p>
+                        <p><code>'click'</code> --- Quando é pressionado e liberado o botão primario do <i>mouse, trackpad, etc.</i></p>
+                        <p><code>'mousemove'</code> --- Sempre que o cursor do mouse se move sobre um elemento. <!-- (? dentro da div?) --></p>
+                        <p><code>'mouseenter' / 'mouseover'</code> --- Quando o cursor do mouse entra nos limites de um elemento.</p>
+                        <p><code>'mouseout'</code> --- Quando o cursor do mouse se move para fora do limite de um elemento.</p>
+                    <hr>
+                <h3>métodos Eventos</h3>
+                <br>
+                <p>são funções prontas com objetivo de trabalhar com os eventos</p>
+                <p><code>evento.stopPropagation() --- </code> método que neutraliza a propagação do evento aos seus <i>childs</i>, contudo, obtém melhor controle de quem dispara o evento.</p>
+            <h2>Arrays</h2>
+                <p><strong>Array ,Vetores ou variável composta</strong>, são uma estrutura de dados que serve para guardar <i>elementos</i> em um espaço da memória. Estes espaços da memória são chamados de variáveis.</p>
+                <br>
+                <p><strong>Elementos --- </strong> é composto por <i>espaço da memória, valor e índice</i> </p>
+                <p><strong>Índice ---</strong> também conhecido como <i>chave ou Key</i></p>
+                <p><strong>Valor --- </strong> conteúdo armazenado dentro dos elentos.</p>
+                <br>
+                <h3>For(in or of )</h3>
+                    <p>estrutura de repetição criada exclusivamente para manipulação de objetos (Arrays). Geralmente<i> optado quando precisamos de interromper</i> durante o percorrimento de um loop ou array.</p>
+                    <p><code>for(n in num) --- </code> ao iterar um array, for(in) é utilizado para percorer pelo índice<i>(indice key = n)</i> elementos<i>(object = num)</i></p>
+                    <p><code>for (n of num) --- </code>ao iterar um array, for(of) é utilizado apenas para iterar e consultar os elementos <i>(valor do object)</i></p>
+                    <br>
+                <h3>.map( )</h3>
+                <p>sintaxe: <code class="codigo"> array.map((ele, indice)=>{bloco})</code></p>
+                    <p>método que manipula uma variável vinculada a um Array,com objetivo de percorrer <i>todos elementos (sem exceção)</i> retornando uma função, objeto ou elemento. Diferente dos loops, que podem ser interrompidos.</p>
+                    <p>Quando precisar retornar um elemento já percorrido pelo .map(), lembrar de atribuir uma nova variável que receberá o retorno, pois, o array inicial continuará com os valores iniciais.</p>
+                    
+                    <br>
+                <h3>.filter( )</h3>
+                    <p>sintaxe: </p>
+                    <p><code class="codigo">const numeros=[1, 2, 3, 4, 5, 6, 7]</code></p>
+                    <p><code class="codigo">const numerosPares= numeros.filter((callback)=>{function}) </code></p>
+                    <blockquote>
+                        <p>há diferentes formas de criar uma função com método .filter(), o <i>'callback'</i>, poderia ser uma função separada.</p>
+                        <p>neste caso, foi utilizado uma ArrowFunction diretamente no .filter()</p>
+                    </blockquote>
+                    <br>
+                    <p>o método .filter() é uma forma de percorrer o Array e retornar um Array filtrado de acordo com a função desejada.</p>
+                    <hr>
+                <h3>.Find( )</h3>
+                    <p>sintaxe: </p>
+                    <p><code class="codigo">const coresArray= ['vermelho', 'azul', 'preto', 'amarelo']</code></p>
+                    <p><code class="codigo">const coresFind= coresArray.find((callback)=>{function}) </code></p>
+                    <blockquote>
+                        <p>há diferentes formas de criar uma função com método .find(), o <i>'callback'</i>, poderia ser uma função separada.</p>
+                        <p>neste caso, foi utilizado uma ArrowFunction diretamente no .find()</p>
+                    </blockquote>
+                    <p>O método .find() é utilizado para retornar o primeiro valor satisfeito na operação desejada, caso não encontrado, retorna <b>undefined</b>.</p>
+                <h3>.every( )</h3>
+                    <p>O método .every() usado para testar se todos os elementos de um array satisfazem uma determinada condição. caso seja satisfeito, retorna <b>True</b>; caso não satisfaça, retorna <b>False</b>.</p>
+                <h3>.some( )</h3>
+                    <p>O método .some() verifica se pelo menos um dos elementos de um array atende a uma condição especificada. caso satisfeito, retorna <b>True</b>, caso não satisfaça, retorna <b>False</b>. </p>
+                    <br>
+                <h3>.reduce( )</h3>
+                    <p>O método .reduce() executa uma função de callback para cada elemento de um array, resultando em um único valor de retorno.</p>
+                    <blockquote>
+                        <p>A função de callback recebe quatro parâmetros: <b>acumulador (acc), atual (cur), indce (idx) e array original</b> </p>
+                        <p>acumulador(acc): o valor inicial (ou valor do callback anterior) </p>
+                        <p>atual(cur): o valor do elemento atual que esta sendo percorrido pelo array.</p>
+                        <p>indice(idx): a posição do elemento atual no array</p>
+                        <p>uma das propriedades das vantagens do .reduce() é o retorno de um novo array atualizado e o acumulo(modificando ou não) como retorno final.</p>
+                    </blockquote>
+                    <br>
+                    <hr>
+                <h3>métodos para gerêncimento de Array</h3>
+                    <p><code>nomeDoArray[x]='novo' --- </code> para atualizar o valor do elemento em determinada posição.</p>
+                    <p><code>.push() --- </code>adiciona um elemento no final do array.</p>
+                    <p><code>.pop() --- </code>retira um elemento no final do array.</p>
+                    <p><code>.unshifit() --- </code>adiciona um elemento no início do array.</p>
+                    <p><code>.shift() --- </code>retira um elemento no início do array.</p>
+                    <hr>
+                    <br>
+                <h3>Matrizes</h3>
+                    <p>Matrizes multidimensionais são basicamente arrays de arrays. Cada elemento de um array pode ser ele próprioum array. permitindo assim criar uma estrutura de camadas.</p>
+                    <p><code class="codigo">const ArrayNumeros=[[1,2,3], [4,5,6],[7,8,9]]</code></p>
+                    <p><code>array[1] --- </code>forma de identificar o array na indice 1</p>
+                    <p><code>array[1][2] --- </code>forma de identificar o array de indice 1 (obtem um objeto que é um outro array), obtem o elemento no indice 2.</p>
+            <h2>coleção Map</h2>
+                <P>A coleção <b>map</b> é uma estrutura composta por <b>chave-valor</b> que são muito importantes para lhe dar com coleções de dados.</P>
+                <p>sintaxe: <code class="codigo">const myMap = new Map();</code></p>
+                <p>O Map é uma coleção de pares chave-valor, onde a chave pode ser de qualquer tipo. (numero ou string)</p>
+                <blockquote>
+                    <p>º sempre que for obter um elemento, referência a <b>chave</b> do elemento para se obter o <b>valor</b></p>
+                    <p>º a chave deve ser única, ja o valor pode ser repetido.</p>
+                </blockquote>
+                <p>Ele lembra a ordem original em que os elementos foram adicionados, permitindo recuperar os dados na mesma ordem em que foram inseridos.</p>
+                <p>Funciona como uma combinação de objeto e array</p>
+                <blockquote>
+                    <p>º Como um objeto, suporta a estrutura de pares chave-valor.</p>
+                    <p>º Como um array, mantém a ordem de inserção.</p>
+                </blockquote>
+                <h3>métodos da coleção Map e Set</h3>
+                    <p><code>.clear() --- </code> remove todos os pares chave-valor, deixando o Map completamente vazio.</p>
+                    <p><code>.delete('chave') --- </code> usado para remover um par chave-valor específico de um objeto Map. Você passa a chave do elemento que deseja remover como argumento para o método .delete(). Se o Map contiver um elemento com essa chave, o elemento será removido e .delete() retornará true. Se não houver elemento com a chave especificada, nada acontecerá e .delete() retornará false.</p>       
+                    <p><code>.entries() --- </code>  retorna um novo iterador de objetos Map que contém os pares chave-valor para cada elemento em ordem de inserção. Cada item do iterador é um array de dois elementos: o primeiro é a chave e o segundo é o valor correspondente.</p>   
+                    <p><code>.forEach() --- </code> percorrer cada elemento de um array.</p>
+                    <p><code>.get('chave') --- </code> usado para obter o valor associado a uma chave específica em um objeto Map; Caso a chave não for encontrada, retornará undefined.</p>
+                    <p><code>.has('chave') --- </code> identificar a existência de um objeto através de sua chave; Caso encontre retorna 'True', caso contrario, 'False'.</p>
+                    <p><code>.keys() --- </code> retorna um novo iterador que contém as chaves para cada elemento em um objeto Map em ordem de inserção. Você pode usar o iterador para percorrer todas as chaves do Map. <b>Obs.:</b> é útil quando você está interessado apenas nas chaves e não nos valores do Map.</p>
+                    <p><code>.values() --- </code> retorna um novo iterador que contém os valores para cada elemento em um objeto Map em ordem de inserção. Você pode usar o iterador para percorrer todos os valores do Map. <b>Obs.:</b> é útil quando você está interessado apenas nos valores e não nas chaves do Map.</p>
+                    <p><code>.set('chave', 'valor') --- </code>usado para adicionar pares chave-valor ao Map. Se a chave já existir no Map, o valor anterior será substituído pelo novo valor. Se a chave não existir, um novo par chave-valor será adicionado ao Map.</p>
+                    
+                    <p><code>.size --- </code> Propriedade de leitura que retorna o tamanho da coleção Map.</p>
+                    <hr>
+            <h2>Objetos</h2>
+                <p>Objeto em JavaScript é uma variável que armazena varios dados, selecionado dentro de chaves duplas <strong>{}</strong>, e podem ter <strong>tipos de dados </strong>diferentes dentro dos atributos.</p>
+                <blockquote>
+                    <p>sintaxe para criar um objeto:</p>
+                    <p><code class="codigo">const novoCarro= new Carro('p1', 'p2', 'p3')</code></p>
+                    <p>para criar um objeto, utiliza-se a palavra chave 'new' e a classe do objeto, e entre parênteses os parâmetros.</p>
+                </blockquote>
+                <br>
+                <h3>class</h3>
+                    <p>as classes são modelos de objetos que serão instanciados como referência de propriedades e funções.</p>
+                    <p>Classe pai sintaxe: </p>
+                    <code class="codigo">
+                        class Carro{
+                            <p>constructor(parâmetros)</p>
+                            <p>this.propriedades= parametro</p>
+                            <p>this.nome= "Fusca"</p>
+                        }
+                    </code>
+                    <blockquote>
+                        <p>Classe pai, são modelos a ser herdados por outras classes de objetos, os parâmetros da função construtora servem para dar valores a propriedades adicionadas.</p>
+                    </blockquote>
+                    <br>
+                <h3>Static</h3>
+                    <p>Método static é um forma de definir propriedades e funções na própria classe do objeto, não no objeto em si, ou seja, não há como instanciar a propriedade da classe, pois na criação do objeto já será herdado a propriedade.</p>
+                    <blockquote>
+                        <p>a declaração do método static, deve ser invocada fora do escopo do método constructor(), pois é a propriedade da classe, não do objeto!!</p>
+                        <P>quando invocar a chamada da propriedade static, refere-se a propria classe, não ao objeto que a pussui.</P>
+                    </blockquote>
+                    <br>
+                <h3>Função Constructor('parametros')</h3>
+                    <p>função construtora é um método que instância propriedades e funções para criação de objetos.</p>
+                    <p><code>this.name= Pname ---</code> a palavra chave 'this', refere a propriedade que receberá o valor do objeto (pelo parâmetro opcionalmente).</p>
+                    <blockquote>
+                    <p>Há diferentes métodos utilizado para trabalhar com as propriedades de um objetos,</p>
+                    <p><b>conferir os métodos da coleção Map e Set.</b></p>
+                    </blockquote>
+                    <br>
+                <h3>Herança de classe</h3>
+                    <p>A herança de classes é baseada no conceito de protótipos. Cada objeto possui um protótipo, que é um objeto do qual ele herda propriedades e métodos. Quando uma propriedade ou método é acessado em um objeto, o JavaScript primeiro verifica se o objeto possui essa propriedade ou método.</p>
+                    <p><code>extends --- </code>Palavra chave para criar uma classe (onde a classe filha) pode herdar propriedades e métodos de outra classe (a classe pai).</p>
+                    <blockquote>
+                        <p><code class="codigo">class Policia extends Carro{}</code></p>
+                        <p>Neste caso, está criando uma class "Policia" que herda propriedades e métodos da classe Carro</p>
+                    </blockquote>
+                    <p><code>constructor(p1, p2){ this.propriedade1 = p1} --- </code>Método constructor serve para acessar as propriedade e funções do objeto.</p>
+                    <blockquote>
+                        <p>o objeto "filho" herda parâmetros e funções do objeto "pai".</p>
+                        <p>há possibilidades de atualizar e adicionar novas propriedades e funções.</p>
+                    </blockquote>
+                    <p><code>super(p1, p2) --- </code>O método super() serve para instanciar os parâmetros do constructor() da classe do objeto "pai", ou seja, invoca os parâmetros da classe pai.</p>
+                    <blockquote>
+                        <p>Em uma classe filha, você deve chamar super() antes de usar "this." Isso é necessário para inicializar a parte herdada da classe pai.</p>
+                        <p>A classe filha herda todos os métodos da classe pai, mas pode sobrescrever qualquer um deles.</p>
+                    </blockquote>
+                    <br>
+                    <hr>
+                <h3>atributos data-</h3>
+                    <p>Os atributos data- em HTML5 permitem armazenar informações personalizadas em elementos HTML. Esses atributos começam com data- seguido por um nome de sua escolha. Por exemplo, data-nome pode ser usado para armazenar um nome específico.</p>
+                    <p><code class="codigo">data-nome="nome"</code> <code class="codigo">data-idade="30"</code> </p>
+                    <blockquote>
+                        <p>
+                            <b>Obs.:</b> quando estiver trabalhando com array, pode acessar propriedades do objeto usando "<code>el.</code>(propriedade this. do objeto);"
+                            <br>Você também pode modificar os valores dos atributos data- diretamente através da propriedade "<code>dataset.</code>(propriedade do objeto)".
+                        </p>
+                    </blockquote>
+                    <br>
+                <h3>prototype</h3>
+                    <p>método que adiciona propriedades e fuções em um objeto.</p>
+                    <p><code>Classe_objeto.prototype.ano= ano</code> --- adicionando uma propriedade ano ao  constructor do objeto.</p>
+                    <blockquote>
+                        <p>º para conferir a nova propriedade adicionada no objeto, entre no console do browser e verifica a propriedade no [prototype].</p>
+                    </blockquote>
+                    <br>
+                    <hr>
+                <h3>Polimorfismo</h3>
+                    <p>O polimorfismo é um conceito fundamental na programação orientada a objetos (POO) que permite que objetos de diferentes classes sejam tratados como objetos de uma classe base comum. Isso promove a reutilização de código e a flexibilidade no design de software.</p>
+                    <p>Ele permite que métodos com o mesmo nome possam ter comportamentos diferentes dependendo do objeto que os invoca. Isso é alcançado principalmente através da herança prototípica e da sobrescrita de métodos</p>
+                    <br>
+                    <h4>Reutilização de codigo</h4>
+                    <p>um dos benefícios do polimorfismo é instanciar métodos da classe base, reutilizando o códigos das funções, possibilitando o acréscimo de informações evitando reescrever o código.</p>
+                    <p><code>super.função() --- </code>O método <code>super.</code> instancia a função desejada da classe Base reaproveitando o código, contúdo possibilitando acrescentar informações.</p>
+                    <br>
+                    <h4>métodos sobreescritos</h4>
+                        <p>invocar uma função que ja foi declarada numa classe Base, irá reescrever a função gerando novas informação específicas.</p>
+                        <br>
+                        <hr>
+                <h3>Abstração</h3>
+                    <p>Classes abstratas é um conceito em POO que se refere a uma classe base que não pode ser instanciadas, ou seja, ela só serve de referência para outras classesc:\Users\romul\Documents\Estudos\curso Js\Objeto\POO\Polimorfismo\index.html c:\Users\romul\Documents\Estudos\curso Js\Objeto\POO\Polimorfismo\script.js</p>
+                    <blockquote>É um conceito de Programação orientada a Objeto que não esta emplementado em Javascript. (¿talvez em TypeScript?)</blockquote>
+                    <br>
+            <h2>JSON</h2>
+                <p>"JavaScript Object Notation", é um formato leve de intercâmbio de dados. Ele é fácil para os humanos lerem e escreverem, e também fácil para máquinas interpretarem e gerarem. JSON é frequentemente usado para transmitir dados entre um servidor e um cliente web, como em aplicações web e APIs.</p>
+                <p>é amplamente utilizado em aplicações web para enviar e receber dados. Por exemplo, ao fazer uma requisição AJAX para um servidor, os dados podem ser enviados e recebidos no formato JSON.</p>
+                <br>
+                <p><code>JSON.stringify()</code> ---  método em JavaScript usado para converter um objeto ou valor JavaScript em uma string JSON. Isso é útil quando você precisa enviar dados de um cliente para um servidor ou armazenar dados em um formato que possa ser facilmente transmitido ou armazenado.</p>
+                <p><code>JSON.parse()</code> --- O método JSON.parse() em JavaScript é usado para analisar uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Isso é útil quando você precisa converter dados recebidos como JSON em um objeto JavaScript para poder manipulá-los.</p>
+                <br>
+                <h3>¿Objeto Literal?</h3>
+                    <hr>
+                    <p><code>let x = {nome:jose, altura:1.80, sexo:M}</code> --- neste caso, <strong>nome é o índice</strong> e <strong>jose é o valor</strong>; para atribuir o valor ao índice utiliza-se "<code> : </code>"</p>
+                    <p><code>let x = {x:y, x:z, engordar(p){} }</code> --- Objetos são variáveis que guardam <strong>valores (atributos)</strong>, e também, podem guardar <strong>funcionalidades(métodos)</strong></p>
+            </div>
+    </div>
+
+    <br>
+    <h1>
+        Dicas de funcionalidades
+    </h1>
+    <h2>Capturar um input rádio</h2>
+        <p>forma de capturar o elemento e seus valores, atravéz, de um evento de click</p>
+        <br>
+        <p>¹ para capturar algum elemento, primeiramente, criar e adicionar uma funcionalida a uma variável.</p>
+        <code class="codigo">const btnCursoSelecionado=document.querySelector("#btnCursoSelecionado")</code>
+        <code class="codigo">btnCursoSelecionado.addEventListener("click", (evt)=>{evento de click})</code>
+        <hr>
+        <p>² dentro do evento de click, criar um vetor que é identificado por armazenar dados de todos input tipo radio.</p>
+        <code class="codigo">const todosRadios=[...document.querySelectorAll("input[type=radio]")]</code>
+        <blockquote>
+            <p>observe que a variável que armazena os input's é um array, pois armazena mais de um valor</p>
+        </blockquote>
+        <hr>
+        <p>³ criar um "let" que armazena os valores da filtragem dos vetores, retornando apenas valores desejados. </p>
+        <code class="codigo">let radioSelecionado= todosRadios.filter((ele)=>{return ele.checked})</code>
+        <blockquote>
+            <p>º observar o tipo de variável a ser utilizado, neste caso "let", pois ele receberá atualizações durante o algoritmo.</p>
+            <p>º o método .filter() só possibilitará ser utilizado, se estiver trabalhando com uma Array.</p>
+            <p>º o método .filter() percorrerá o array e retornará o valor que deseja ser filtrado, o valor retornado será em formato de array.</p>
+            <p>º a variável que recebe a filtragem, receberá o valor em forma de input, não elemento! caso deseja modifica-la, navege-a com pela"hierarquia DOM".</p>
+        </blockquote>
+        <hr>
+        <p>³ para obter o elemento da filtragem navegue 'pela hierarquia DOM"</p>
+        <code class="codigo">radioSelecionado = radioSelecionado[0]</code>
+        <code class="codigo">radioSelecionado =radioSelecionado.parentNode.parentNode.firstChild</code>
+        <blockquote>
+            <p>º não há possibilidade de trabalhar com um elemento exclusivamente, se ele estiver em formato de array.</p>
+            <p>º portanto, indique a posição[indice key] do array que deseja trabalhar (mesmo se retornar  apenas "um" valor de um array). Isso irá alterar o tipo de variável que estamos trabalhando, deixando de ser um array.</p>
+            <p>º para capturar algum elemento navegue pela "hierarquia DOM"</p>
+        </blockquote>
+        <hr>
+        <h2>Remover objeto do array</h2>
+        <p>1º  Criar um evento de click para capturar o "evt.target"</p>
+        <p>2º Criar uma função para filtrar o array ja existente.</p>
+        <blockquote>
+            <p>curiosidade:</p>
+            <p>a função que contém o método .filter(), que retornará outro array com a exigência que desejar.</p>
+        </blockquote>
+        <p>3º o elemento já capturado pelo "evt.target" será o parâmetro da função de filtragem.</p>
+        <blockquote>
+            ou seja, como o parâmetro da função de removerArray é um <code>evt.target.dataset.nome</code> , a filtragem da função retornará um outro array cujo os elementos sejam diferentes(=!) do parâmetro da função.
+        </blockquote>
+        <br>
+        <hr>
+        <H1>DUVIDAS</H1>
+
+    <p>paradigma constructor.</p>
+    <p>como funciona: <a href="https://blog.cod3r.com.br/como-usar-o-live-server-de-forma-ideal/">Live server </a></p>
+    <P><code> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</code> --- conversão do simblo <i>Dóllar</i> para <i>Real.</i></P> <!-- aprnder a ler o código-->
+    
+    <p>-HTML E CSS
+        -Functions
+        -arrow function
+        -callbacks
+        -funções anônimas
+        -IIFE
+        -orientação a objetos
+        -modularização
+        -regEx(expressões regulares)
+        -Json
+        -AJAX
+        -NodeJs
+        -bibliotecas e frameworks(Jquery, vue,js, angular[...])
+        -bitwise - operadores bit a bit</p>
+        -spread - operador aritiméticio (utilizado bastante em arrays)
+        -estudar try(), cacht(); certificação de error.     
+        <p><code> x[3] = 10</code> --- O índice <i>3</i> da variável <i>X</i>, recebe o <i>VALOR '10'</i></p>
+        <p><code>x.length --- </code> É um atributo que revela a <i>quantidade de índices(key)</i> de um vetor.</p>
+        <p><code>x.sort() ---</code> organiza valores dos índices em ordem crescente.</p>
+        <p><code>x.push(x, y, z)</code> --- O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.</p>
+        <p><code>x.indexOf('x')</code> ---  é um método que retorna o primeiro índice no qual um determinado elemento pode ser encontrado em um array. Se o elemento não estiver presente no array, ele retorna -1. </p>
+
+</body>
+</html>

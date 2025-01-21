@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+
+* {
+    padding:0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 10px;
+    padding: 10px;
+}
+
+p { 
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 2;
+    padding-left: 15px;
+    padding-top: 15px ;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: aliceblue;
+    text-shadow: 1px 1px black;
+    background-color: grey;
+    padding:10px;
+    margin-left: -10px;
+}
+
+.secundario {
+    color: brown;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.508);
+    font-size: 2;
+}
+
+h3 {
+    color: brown;
+}
+
+h4{
+    padding-left: 10px;
+    color:rgb(128, 33, 33);
+}
+
+#maior {
+    padding: 0px;
+    border: 1px solid black;
+    
+}
+
+#segunda {
+    background-color: lightgrey;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-top: 0px;
+}
+
+code{
+    font-weight: 600;
+}
+.codigo {
+    color: rgb(2, 138, 2);
+    text-shadow: 1px 1px 1px rgba(190, 190, 190, 0.518);
+    background-color: rgba(80, 80, 80, 0.123);
+    width: 400px;
+    font-weight: 200;
+    margin-left: 50px;
+}
+
+.primal {
+    color: rgb(68, 9, 9);
+    padding: 10px 10px ;
+}
+
+#propriedade > p {
+    text-indent: 20px;
+}
+
+i {
+    font-weight: 550;
+}
+
+blockquote{
+    background-color: rgba(255, 255, 121, 0.321);
+    margin: 10px;
+    padding: 0px;
+}
+
+a {
+    cursor: pointer;
+    margin-bottom: 10px;
+
+
+}
+
+a:hover{
+    transform: 1s;
+    text-shadow: 1px 1px 1px aliceblue;
+}
+
+hr{
+    margin: 20px 0px;
+}
