@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilo.guia/style.css">
+    <link rel="stylesheet" href="../estilo.guia/style.css">
 </head>
 <body>
     <h1>Java Scripit</h1>
 
-    <div id="maior">      
-        <div id="segunda">
+    <section class="principal">      
+        <div class="secundaria">
             <h2>javaScript puro!</h2>
                 <p><code>console.log('xxx')</code> --- método grava (registra) uma mensagem no console; útil para fins de teste.</p>
                 <p><code>xxx = newDate()</code>  --- Busca no sistema operacional do Pc 'horas' em tempo realmente</p>
@@ -26,7 +26,7 @@
                 <p><code>document.write(`xxx`)</code> ---Método escrever algo no <i>body</i> do documento html.</p>
                 <p><code>var p1 = window.document.getElementsByTagName('p')[0]</code> ---  encontrando o primeiro elemento de parágrafo na página HTML e armazenando uma referência a ele na variável p1. Se não houver nenhum elemento de parágrafo na página, p1 será <i>undefined</i>.</p> 
         </div>   
-        <div id="segunda">
+        <div class="secundaria">
             <h2>Variáveis</h2>
             <br>
                 <h3>template String</h3>
@@ -568,83 +568,81 @@
                     <p><code>let x = {nome:jose, altura:1.80, sexo:M}</code> --- neste caso, <strong>nome é o índice</strong> e <strong>jose é o valor</strong>; para atribuir o valor ao índice utiliza-se "<code> : </code>"</p>
                     <p><code>let x = {x:y, x:z, engordar(p){} }</code> --- Objetos são variáveis que guardam <strong>valores (atributos)</strong>, e também, podem guardar <strong>funcionalidades(métodos)</strong></p>
             </div>
-    </div>
-
-    <br>
-    <h1>
-        Dicas de funcionalidades
-    </h1>
-    <h2>Capturar um input rádio</h2>
-        <p>forma de capturar o elemento e seus valores, atravéz, de um evento de click</p>
-        <br>
-        <p>¹ para capturar algum elemento, primeiramente, criar e adicionar uma funcionalida a uma variável.</p>
-        <code class="codigo">const btnCursoSelecionado=document.querySelector("#btnCursoSelecionado")</code>
-        <code class="codigo">btnCursoSelecionado.addEventListener("click", (evt)=>{evento de click})</code>
-        <hr>
-        <p>² dentro do evento de click, criar um vetor que é identificado por armazenar dados de todos input tipo radio.</p>
-        <code class="codigo">const todosRadios=[...document.querySelectorAll("input[type=radio]")]</code>
-        <blockquote>
-            <p>observe que a variável que armazena os input's é um array, pois armazena mais de um valor</p>
-        </blockquote>
-        <hr>
-        <p>³ criar um "let" que armazena os valores da filtragem dos vetores, retornando apenas valores desejados. </p>
-        <code class="codigo">let radioSelecionado= todosRadios.filter((ele)=>{return ele.checked})</code>
-        <blockquote>
-            <p>º observar o tipo de variável a ser utilizado, neste caso "let", pois ele receberá atualizações durante o algoritmo.</p>
-            <p>º o método .filter() só possibilitará ser utilizado, se estiver trabalhando com uma Array.</p>
-            <p>º o método .filter() percorrerá o array e retornará o valor que deseja ser filtrado, o valor retornado será em formato de array.</p>
-            <p>º a variável que recebe a filtragem, receberá o valor em forma de input, não elemento! caso deseja modifica-la, navege-a com pela"hierarquia DOM".</p>
-        </blockquote>
-        <hr>
-        <p>³ para obter o elemento da filtragem navegue 'pela hierarquia DOM"</p>
-        <code class="codigo">radioSelecionado = radioSelecionado[0]</code>
-        <code class="codigo">radioSelecionado =radioSelecionado.parentNode.parentNode.firstChild</code>
-        <blockquote>
-            <p>º não há possibilidade de trabalhar com um elemento exclusivamente, se ele estiver em formato de array.</p>
-            <p>º portanto, indique a posição[indice key] do array que deseja trabalhar (mesmo se retornar  apenas "um" valor de um array). Isso irá alterar o tipo de variável que estamos trabalhando, deixando de ser um array.</p>
-            <p>º para capturar algum elemento navegue pela "hierarquia DOM"</p>
-        </blockquote>
-        <hr>
-        <h2>Remover objeto do array</h2>
-        <p>1º  Criar um evento de click para capturar o "evt.target"</p>
-        <p>2º Criar uma função para filtrar o array ja existente.</p>
-        <blockquote>
-            <p>curiosidade:</p>
-            <p>a função que contém o método .filter(), que retornará outro array com a exigência que desejar.</p>
-        </blockquote>
-        <p>3º o elemento já capturado pelo "evt.target" será o parâmetro da função de filtragem.</p>
-        <blockquote>
-            ou seja, como o parâmetro da função de removerArray é um <code>evt.target.dataset.nome</code> , a filtragem da função retornará um outro array cujo os elementos sejam diferentes(=!) do parâmetro da função.
-        </blockquote>
-        <br>
-        <hr>
-        <H1>DUVIDAS</H1>
-
-    <p>paradigma constructor.</p>
-    <p>como funciona: <a href="https://blog.cod3r.com.br/como-usar-o-live-server-de-forma-ideal/">Live server </a></p>
-    <P><code> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</code> --- conversão do simblo <i>Dóllar</i> para <i>Real.</i></P> <!-- aprnder a ler o código-->
-    
-    <p>-HTML E CSS
-        -Functions
-        -arrow function
-        -callbacks
-        -funções anônimas
-        -IIFE
-        -orientação a objetos
-        -modularização
-        -regEx(expressões regulares)
-        -Json
-        -AJAX
-        -NodeJs
-        -bibliotecas e frameworks(Jquery, vue,js, angular[...])
-        -bitwise - operadores bit a bit</p>
-        -spread - operador aritiméticio (utilizado bastante em arrays)
-        -estudar try(), cacht(); certificação de error.     
-        <p><code> x[3] = 10</code> --- O índice <i>3</i> da variável <i>X</i>, recebe o <i>VALOR '10'</i></p>
-        <p><code>x.length --- </code> É um atributo que revela a <i>quantidade de índices(key)</i> de um vetor.</p>
-        <p><code>x.sort() ---</code> organiza valores dos índices em ordem crescente.</p>
-        <p><code>x.push(x, y, z)</code> --- O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.</p>
-        <p><code>x.indexOf('x')</code> ---  é um método que retorna o primeiro índice no qual um determinado elemento pode ser encontrado em um array. Se o elemento não estiver presente no array, ele retorna -1. </p>
+    </section>
+    <section class="principal">
+        <div class="secundaria">
+            <h2>Dicas de funcionalidades</h2>
+            <h3>Capturar um input rádio</h3>
+            <p>forma de capturar o elemento e seus valores, atravéz, de um evento de click</p>
+            <br>
+            <p>¹ para capturar algum elemento, primeiramente, criar e adicionar uma funcionalida a uma variável.</p>
+            <code class="codigo">const btnCursoSelecionado=document.querySelector("#btnCursoSelecionado")</code>
+            <code class="codigo">btnCursoSelecionado.addEventListener("click", (evt)=>{evento de click})</code>
+            <hr>
+            <p>² dentro do evento de click, criar um vetor que é identificado por armazenar dados de todos input tipo radio.</p>
+            <code class="codigo">const todosRadios=[...document.querySelectorAll("input[type=radio]")]</code>
+            <blockquote>
+                <p>observe que a variável que armazena os input's é um array, pois armazena mais de um valor</p>
+            </blockquote>
+            <hr>
+            <p>³ criar um "let" que armazena os valores da filtragem dos vetores, retornando apenas valores desejados. </p>
+            <code class="codigo">let radioSelecionado= todosRadios.filter((ele)=>{return ele.checked})</code>
+            <blockquote>
+                <p>º observar o tipo de variável a ser utilizado, neste caso "let", pois ele receberá atualizações durante o algoritmo.</p>
+                <p>º o método .filter() só possibilitará ser utilizado, se estiver trabalhando com uma Array.</p>
+                <p>º o método .filter() percorrerá o array e retornará o valor que deseja ser filtrado, o valor retornado será em formato de array.</p>
+                <p>º a variável que recebe a filtragem, receberá o valor em forma de input, não elemento! caso deseja modifica-la, navege-a com pela"hierarquia DOM".</p>
+            </blockquote>
+            <hr>
+            <p>³ para obter o elemento da filtragem navegue 'pela hierarquia DOM"</p>
+            <code class="codigo">radioSelecionado = radioSelecionado[0]</code>
+            <code class="codigo">radioSelecionado =radioSelecionado.parentNode.parentNode.firstChild</code>
+            <blockquote>
+                <p>º não há possibilidade de trabalhar com um elemento exclusivamente, se ele estiver em formato de array.</p>
+                <p>º portanto, indique a posição[indice key] do array que deseja trabalhar (mesmo se retornar  apenas "um" valor de um array). Isso irá alterar o tipo de variável que estamos trabalhando, deixando de ser um array.</p>
+                <p>º para capturar algum elemento navegue pela "hierarquia DOM"</p>
+            </blockquote>
+            <hr>
+            <h2>Remover objeto do array</h2>
+            <p>1º  Criar um evento de click para capturar o "evt.target"</p>
+            <p>2º Criar uma função para filtrar o array ja existente.</p>
+            <blockquote>
+                <p>curiosidade:</p>
+                <p>a função que contém o método .filter(), que retornará outro array com a exigência que desejar.</p>
+            </blockquote>
+            <p>3º o elemento já capturado pelo "evt.target" será o parâmetro da função de filtragem.</p>
+            <blockquote>
+                ou seja, como o parâmetro da função de removerArray é um <code>evt.target.dataset.nome</code> , a filtragem da função retornará um outro array cujo os elementos sejam diferentes(=!) do parâmetro da função.
+            </blockquote>
+            <br>
+            <hr>
+            <H2>DUVIDAS</H2>
+            <p>paradigma constructor.</p>
+            <p>como funciona: <a href="https://blog.cod3r.com.br/como-usar-o-live-server-de-forma-ideal/">Live server </a></p>
+            <P><code> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</code> --- conversão do simblo <i>Dóllar</i> para <i>Real.</i></P> <!-- aprnder a ler o código-->
+            <p>-HTML E CSS
+            -Functions
+            -arrow function
+            -callbacks
+            -funções anônimas
+            -IIFE
+            -orientação a objetos
+            -modularização
+            -regEx(expressões regulares)
+            -Json
+            -AJAX
+            -NodeJs
+            -bibliotecas e frameworks(Jquery, vue,js, angular[...])
+            -bitwise - operadores bit a bit</p>
+            -spread - operador aritiméticio (utilizado bastante em arrays)
+            -estudar try(), cacht(); certificação de error.
+            <p><code> x[3] = 10</code> --- O índice <i>3</i> da variável <i>X</i>, recebe o <i>VALOR '10'</i></p>
+            <p><code>x.length --- </code> É um atributo que revela a <i>quantidade de índices(key)</i> de um vetor.</p>
+            <p><code>x.sort() ---</code> organiza valores dos índices em ordem crescente.</p>
+            <p><code>x.push(x, y, z)</code> --- O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.</p>
+            <p><code>x.indexOf('x')</code> ---  é um método que retorna o primeiro índice no qual um determinado elemento pode ser encontrado em um array. Se o elemento não estiver presente no array, ele retorna -1. </p>
+        </div>
+    </section>
 
 </body>
 </html>

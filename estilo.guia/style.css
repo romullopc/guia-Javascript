@@ -12,6 +12,7 @@ body {
     padding: 10px;
 }
 
+
 p { 
     font-family: sans-serif;
     font-weight: normal;
@@ -24,44 +25,29 @@ h1 {
     padding-bottom: 10px;
 }
 
-h2 {
+section > div > h2{
     color: aliceblue;
     text-shadow: 1px 1px black;
-    background-color: grey;
-    padding:10px;
-    margin-left: -10px;
+    background-color: rgb(147, 147, 147);
+    padding:10px 10px;    background-color: grey;
+    color: white;
+    margin: 0px;  
 }
 
-.secundario {
-    color: brown;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.508);
-    font-size: 2;
-}
-
-h3 {
-    color: brown;
-}
-
-h4{
+h4, h3{
     padding-left: 10px;
-    color:rgb(128, 33, 33);
 }
 
-#maior {
-    padding: 0px;
+.secundaria {
+    padding:0px;
     border: 1px solid black;
-    
-}
-
-#segunda {
-    background-color: lightgrey;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    border-top: 0px;
+    background-color: rgba(250, 236, 218, 0.897);
+    margin-bottom: 10px;
 }
 
 code{
     font-weight: 600;
+    color: brown;
 }
 .codigo {
     color: rgb(2, 138, 2);
@@ -70,15 +56,6 @@ code{
     width: 400px;
     font-weight: 200;
     margin-left: 50px;
-}
-
-.primal {
-    color: rgb(68, 9, 9);
-    padding: 10px 10px ;
-}
-
-#propriedade > p {
-    text-indent: 20px;
 }
 
 i {
@@ -94,8 +71,6 @@ blockquote{
 a {
     cursor: pointer;
     margin-bottom: 10px;
-
-
 }
 
 a:hover{
@@ -104,5 +79,5 @@ a:hover{
 }
 
 hr{
-    margin: 20px 0px;
+    margin: 20px;
 }
