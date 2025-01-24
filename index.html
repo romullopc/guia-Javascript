@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Java Scripit</h1>
-
     <section class="principal">      
         <article class="secundaria">
             <h2>javaScript puro!</h2>
@@ -28,47 +27,47 @@
         </article>
         <article class="secundaria">
             <h2>Variáveis</h2>
-            <P>Variáveis são contêineres para armazenar dados possibilitando 2 tipos de alcances. <b>Local e Global.</b></P>
-            <p><b>Local</b> --- Uma variável local é uma variável que é declarada dentro de uma função e só pode ser acessada dentro dessa função.</p>
-            <p><b>Global</b> --- Uma variável declarada fora de uma função se torna global, ou seja, podem ser acessadas de qualquer lugar em um programa JavaScript.</p>
-            <p><code>var</code> --- Forma de declarar variavel de escopo global que não deve sofrer alterações. (oferece suporte a navegadores antigos).</p>
-            <p><code>const</code> --- Forma de declarar variavel de forma mais moderna, tem o alcance de escopo global e não deve sofrer alterações.</p>
-            <blockquote>
-                <p>A forma de declarar variavel <code>const</code> veio para substituir o <code>var</code> corrigindo erros e melhorando o desempenhos nos algoritmos.</p>
-            </blockquote>
-            <p><code>let</code> --- forma de declarar variavel em escopo local, possibilitando a alteração de seu valor. (somente usado quando não há possibilidade de usar <b>const</b>).</p>
-            <h3>template String</h3>
-            <p>é uma forma moderna de declarar string, que permite a interpolação de expressões e a criação de string multilinha.</p>
-            <p>sintaxe: </p>
-            <code class="codigo">var a = 5;</code>
-            <code class="codigo">var b = 10;</code>
-            <code class="codigo">console.log(`a soma das variáveis é: ${a+b}`)</code>
-            <p>a sintaxe da template string é a alternação <b>do acento aspas</b> para o <b>acento grave</b>, e quando for interpolar o texto para a variável, utiliza o sinal <b>${x}</b>.</p>
-            <hr>
-            <h3>Tipos primitivos primordiais</h3>
-            <p><code>console.log(typeof(var))</code> --- indentifica qual tipagem da variável selecionada.</p>
-            <p><code>Númerais</code> --- 1 2 3,  -1 -2 -3,  1.1 1.2 1.3</p>
-            <p><code>Number(n)</code> --- converte <i>var </i>para <i>número de forma genérica. (ES6)</i></p>
-            <p><code>var.toFixed(2) </code> --- acrescentar um <i>.</i> após a <i>var</i> e conta quantas casas desejar.</p>
-            <p><code>var.toFixed(2).replace('.', ',')</code> --- para trocar o <i>.</i> por <i>,</i> em números reais.</p>
-            <p><code>Number.parseInt(n)</code> --- converter <i>var</i> para <i>números ineiros</i></p>
-            <p><code>Number.parseFloat(n)</code> --- converter <i>var</i> para <i>números reais</i>.</p>
-            <p><code>String </code> --- Variáveis com sequências de caracteres, (numerais ou letras).</p>
-            <p><code>String(n)</code> --- converte <i>números</i> para <i>String de forma genérica. (ES6)</i></p>
-            <p><code>` xxx ${var} xxx`</code> --- <i>Template string</i> forma mais limpla de escrever a <i>var</i> para o usuário. <i>(ES6)</i></p>
-            <P><code>var.length</code> --- quantos <i>caracteres</i> a <i>String</i> tem.</P>
-            <p><code>var.toUpperCase()</code> --- Formatação da <i>string;</i> tudo para <i>MAIÚSCULA</i></p>
-            <p><code>vat.toLowerCase()</code> --- Formatação da <i>string.</i> tudo para <i>minúscula</i></p>
-            <p><code>Booleans</code> --- condicionais (True and False).</p>
-            <p> Podem começar com <code>Letra</code>, <code>$</code> ou <code>_</code></p>
-            <p><code>não </code> podem começar com <code>número</code>.</p>
-            <p> É possível usar <code>letras</code> e <code>números.</code> (letras maiúsculas fazem, diferença!).</p>
-            <p> É possivel <code>acentos</code> e <code>símbulo.s</code></p>
-            <p><code>Não</code> podem conter <code>espaços.</code></p>
-            <p><code>Não</code> podem ser <code>palavras reservadas.</code></p>
-            <p><code> = </code> --- atribui valor à variavel.</p>
-            <p><code> + </code> --- usado para concatenar string + variável. Caso queira usar como sinal de adição, tera que connverter <code>string</code> para <code>number.</code></p>
-            <p><code> var (nome da var) = window.prompt('xxx')</code> --- Atribui a variável ao alert.</p>
+                <P>Variáveis são contêineres para armazenar dados possibilitando 2 tipos de alcances. <b>Local e Global.</b></P>
+                <p><b>Local</b> --- Uma variável local é uma variável que é declarada dentro de uma função e só pode ser acessada dentro dessa função.</p>
+                <p><b>Global</b> --- Uma variável declarada fora de uma função se torna global, ou seja, podem ser acessadas de qualquer lugar em um programa JavaScript.</p>
+                <p><code>var</code> --- Forma de declarar variavel de escopo global que não deve sofrer alterações. (oferece suporte a navegadores antigos).</p>
+                <p><code>const</code> --- Forma de declarar variavel de forma mais moderna, tem o alcance de escopo global e não deve sofrer alterações.</p>
+                <blockquote>
+                    <p>A forma de declarar variavel <code>const</code> veio para substituir o <code>var</code> corrigindo erros e melhorando o desempenhos nos algoritmos.</p>
+                </blockquote>
+                <p><code>let</code> --- forma de declarar variavel em escopo local, possibilitando a alteração de seu valor. (somente usado quando não há possibilidade de usar <b>const</b>).</p>
+                <h3>template String</h3>
+                    <p>é uma forma moderna de declarar string, que permite a interpolação de expressões e a criação de string multilinha.</p>
+                    <p>sintaxe: </p>
+                    <code class="codigo">var a = 5;</code>
+                    <code class="codigo">var b = 10;</code>
+                    <code class="codigo">console.log(`a soma das variáveis é: ${a+b}`)</code>
+                    <p>a sintaxe da template string é a alternação <b>do acento aspas</b> para o <b>acento grave</b>, e quando for interpolar o texto para a variável, utiliza o sinal <b>${x}</b>.</p>
+                    <hr>
+                <h3>Tipos primitivos primordiais</h3>
+                    <p><code>console.log(typeof(var))</code> --- indentifica qual tipagem da variável selecionada.</p>
+                    <p><code>Númerais</code> --- 1 2 3,  -1 -2 -3,  1.1 1.2 1.3</p>
+                    <p><code>Number(n)</code> --- converte <i>var </i>para <i>número de forma genérica. (ES6)</i></p>
+                    <p><code>var.toFixed(2) </code> --- acrescentar um <i>.</i> após a <i>var</i> e conta quantas casas desejar.</p>
+                    <p><code>var.toFixed(2).replace('.', ',')</code> --- para trocar o <i>.</i> por <i>,</i> em números reais.</p>
+                    <p><code>Number.parseInt(n)</code> --- converter <i>var</i> para <i>números ineiros</i></p>
+                    <p><code>Number.parseFloat(n)</code> --- converter <i>var</i> para <i>números reais</i>.</p>
+                    <p><code>String </code> --- Variáveis com sequências de caracteres, (numerais ou letras).</p>
+                    <p><code>String(n)</code> --- converte <i>números</i> para <i>String de forma genérica. (ES6)</i></p>
+                    <p><code>` xxx ${var} xxx`</code> --- <i>Template string</i> forma mais limpla de escrever a <i>var</i> para o usuário. <i>(ES6)</i></p>
+                    <P><code>var.length</code> --- quantos <i>caracteres</i> a <i>String</i> tem.</P>
+                    <p><code>var.toUpperCase()</code> --- Formatação da <i>string;</i> tudo para <i>MAIÚSCULA</i></p>
+                    <p><code>vat.toLowerCase()</code> --- Formatação da <i>string.</i> tudo para <i>minúscula</i></p>
+                    <p><code>Booleans</code> --- condicionais (True and False).</p>
+                    <p> Podem começar com <code>Letra</code>, <code>$</code> ou <code>_</code></p>
+                    <p><code>não </code> podem começar com <code>número</code>.</p>
+                    <p> É possível usar <code>letras</code> e <code>números.</code> (letras maiúsculas fazem, diferença!).</p>
+                    <p> É possivel <code>acentos</code> e <code>símbulo.s</code></p>
+                    <p><code>Não</code> podem conter <code>espaços.</code></p>
+                    <p><code>Não</code> podem ser <code>palavras reservadas.</code></p>
+                    <p><code> = </code> --- atribui valor à variavel.</p>
+                    <p><code> + </code> --- usado para concatenar string + variável. Caso queira usar como sinal de adição, tera que connverter <code>string</code> para <code>number.</code></p>
+                    <p><code> var (nome da var) = window.prompt('xxx')</code> --- Atribui a variável ao alert.</p>
             <h2>Operadores aritiméticos</h2>
                 <p>operadores aritiméticos > operadores relacionais > operadores Lógicos</p>
                 <h3>Precedência aritimética</h3>
@@ -100,39 +99,73 @@
                         <p><code>5 === '5' False</code> --- Neste caso o operador relacional diferencia na tipagem do valor da variável <i>(Idêntico).</i> </p>
                         <hr>
                 <h3>Operadores Lógicos</h3>
-                <p>precedência dos operadores lógicos: <code>!</code> > <code> && </code> > <code> ||</code></p>
-                <p>sempre terão como resposta entre dos valores <i>(true or False)</i>; também conhecido como valores <i>Booleanos</i>.</p>
-                <p><code>!</code> --- Negação; ou seja, se a operação for verdadeira <i>(False)</i>, se a operação for falsa <i>(True)</i>.</p>
-                <p><code>&&</code> --- Conjunção. Quando a operação exige mais de uma condição, e as duas tem que ser satisfeitas para se tornar <i>(True).</i>.</p>
-                <p><code>||</code> --- Disjunção. Quando a operação exige que apenas uma das condições tem que ser satisfeita para se tornar <i>(True).</i></p>
-                <hr>
+                    <p>precedência dos operadores lógicos: <code>!</code> > <code> && </code> > <code> ||</code></p>
+                    <p>sempre terão como resposta entre dos valores <i>(true or False)</i>; também conhecido como valores <i>Booleanos</i>.</p>
+                    <p><code>!</code> --- Negação; ou seja, se a operação for verdadeira <i>(False)</i>, se a operação for falsa <i>(True)</i>.</p>
+                    <p><code>&&</code> --- Conjunção. Quando a operação exige mais de uma condição, e as duas tem que ser satisfeitas para se tornar <i>(True).</i>.</p>
+                    <p><code>||</code> --- Disjunção. Quando a operação exige que apenas uma das condições tem que ser satisfeita para se tornar <i>(True).</i></p>
+                    <hr>
                 <h3>Operadores Ternário</h3>
-                <p><i>operação Ternária (?)</i>; é um teste lógico que retorna <b>"true": "false"</b> , se o resultado for 1 é 'true'; se o resultado for 0 é 'false'</p>
-                <p><code>var resposta = idade >= 18 ? 'maior' : 'menor'</code></p>
-                <p><code> ' ? ' </code>Primeiro: analisar o teste que foi lhe dado (todo cálculo que antecede o ponto de <i>interrogação</i>).</p>
-                <p><code>' : ' </code> Segundo: executando o cálculo, poderemos receber dois tipos de resultado <i>(True or False)</i>, ambos, respectivamente, separados por dois pontos <code>' : '</code></p>
-                <p>Se o resultado for <code>(True)</code> atribuirá os dados que <b>antecedem  ' : '</b></p>
-                <p>Senão, se o resultado for <code>(False)</code> atribuirá os dados que <b>precedem ' : '</b> </p>
-                <p><code>!() ---- </code> negação, inverte o teste lógico.</p>
-                <hr>
+                    <p><i>operação Ternária (?)</i>; é um teste lógico que retorna <b>"true": "false"</b> , se o resultado for 1 é 'true'; se o resultado for 0 é 'false'</p>
+                    <p><code>var resposta = idade >= 18 ? 'maior' : 'menor'</code></p>
+                    <p><code> ' ? ' </code>Primeiro: analisar o teste que foi lhe dado (todo cálculo que antecede o ponto de <i>interrogação</i>).</p>
+                    <p><code>' : ' </code> Segundo: executando o cálculo, poderemos receber dois tipos de resultado <i>(True or False)</i>, ambos, respectivamente, separados por dois pontos <code>' : '</code></p>
+                    <p>Se o resultado for <code>(True)</code> atribuirá os dados que <b>antecedem  ' : '</b></p>
+                    <p>Senão, se o resultado for <code>(False)</code> atribuirá os dados que <b>precedem ' : '</b> </p>
+                    <p><code>!() ---- </code> negação, inverte o teste lógico.</p>
+                    <hr>
                 <h3>Operador spread [...]</h3>
-                <p>Operador spread tem a funcionalidade de concatenar iteraveis, adicionando um novo array com a soma de indices.</p>
+                    <p>Operador spread tem a funcionalidade de concatenar iteraveis, adicionando um novo array com a soma de indices.</p>
+                    <br>
+                    <h4>spread em funções</h4>
+                        <p> 
+                            Quando se trata de funções, o operador spread, tem um papel fundamental ao trabalharmos com arrays, objetos ou coleçõesHTML.<br>
+                            Pois quando destribuirmos os indices de uma variavel iteravel à uma função, os valores se encaixam em suas respectivas propriedades, <br>
+                            nos permitindo percorrer por cada elemento de forma individual e extrair o resultado da função.
+                        </p>
+                        <br>
+                    <h4>spread em HTMLCollection</h4>
+                        <p>Quando atribuirmos o operador spread a um HTMLCollection, transforma uma coleção de itens HTML em um array iteravel possibilitando adicionar propriedades e métodos em cada elemento do array.</p>
+                    <blockquote>
+                        <p><b>HTMLCollection</b>: É uma coleção de elementos html que compartilham mesmas identidade, seja por class ou Tagname; permitindo trabalhar com apenas recursos HTML e não pode ser iterado.</p>
+                        <p><b>Array</b>: Apesar da semelhanças com HTMLCollection, atravez da manipulação do DOM, possibilita a iteração, atribuição de propriedades e métodos Javascript a cada elemento HTML tornado-o mais dinâmico.</p>
+                    </blockquote>
+                    <br>
+            <h2>Estrutura condicionais</h2>
+                <p>avalia uma condição, para que um bloco de instruções seja interpretada.</p>
+                <h3>If, Else if, else</h3>
+                    <p>esta estrutura condicional só será executada se a condição for satisfeita, caso não seja, ignora a expressão condicional e prossegirá com algoritmo.</p>
+                    <blockquote>
+                        <p>O comando <b>if</b> é adequado a usar quando o resultado for booleano, ou seja, condições binarias simples, como "true" ou "false".</p>
+                    </blockquote>
+                    <hr>
+                <h3>Switch CASE</h3>
+                    <p>condicionais que trabalha com diferentes possibilidades <b>"CASE"</b>, caso satisfeito executa um dos casos, caso nenhum case for satisfeito executa o camando dafault.</p>
+                    <p><code>case 1: case 2: case3:</code> blocos de códigos guardado dentro de uma variável <code>case x:</code>, caso conveniente, execute a variável que lhe satisfaça</p>
+                    <p><code>break ---</code> comando que finaliza a leitura de um bloco de código <code>case X:</code>, caso ignorado, o programa continuará lendo o próximo bloco até encontrar um comando <i>break ou default</i></p>
+                    <p><code>default ---</code> comando que finaliza as condições, caso nenhuma das condições seja satisfeita.</p>
+                    <blockquote>
+                        <p>O teste Switch case pode ser uma alternativa quando se trabalha com diversos "if-else", tornando mais limpo o campo do algoritmo.</p>
+                        <p>Além de ser adqueado quando ja sabemos exatamente as listas de casos e condições que desejamos executar.</p>
+                    </blockquote>
+                    <br>
+            <h2>Estrutura de repeição</h2>
+                <p>Tecnicamente chamado de iteração, é utilizado para repetir um bloco de comando de acordo com a necessidade.</p>
                 <br>
-                <h4>spread em funções</h4>
-                <p> 
-                    Quando se trata de funções, o operador spread, tem um papel fundamental ao trabalharmos com arrays, objetos ou coleçõesHTML.<br>
-                    Pois quando destribuirmos os indices de uma variavel iteravel à uma função, os valores se encaixam em suas respectivas propriedades, <br>
-                    nos permitindo percorrer por cada elemento de forma individual e extrair o resultado da função.
-                </p>
-                <br>
-                <h4>spread em HTMLCollection</h4>
-                <p>Quando atribuirmos o operador spread a um HTMLCollection, transforma uma coleção de itens HTML em um array iteravel possibilitando adicionar propriedades e métodos em cada elemento do array.</p>
-                <blockquote>
-                    <p><b>HTMLCollection</b>: É uma coleção de elementos html que compartilham mesmas identidade, seja por class ou Tagname; permitindo trabalhar com apenas recursos HTML e não pode ser iterado.</p>
-                    <p><b>Array</b>: Apesar da semelhanças com HTMLCollection, atravez da manipulação do DOM, possibilita a iteração, atribuição de propriedades e métodos Javascript a cada elemento HTML tornado-o mais dinâmico.</p>
-                </blockquote>
-                <br>
-            <h2>DOM (Document Object Model)</h3>
+                <h3>For</h3>
+                <p>sintaxe: <code class="codigo">for(let inicializador; condição; contador) {bloco a ser executado}</code></p>
+                    <p>estrutura de repetição <i>DEFINIDO</i>, ou seja, é usado quando sabemos a quantidade de vezes que o bloco será iterado.</p>
+                    <blockquote>
+                        <p>Estrutura de iteração <b>for</b> só será executa enquanto a condição for verdadeira.</p>
+                        <p>observar que o contador será alterado antes mesmo de executar o bloco de código; e se o contador não for coerente com o teste, há possibilidade de entrar em loop infinito.</p>
+                    </blockquote>
+                    <hr>
+                    <h3>While</h3>     
+                    <p>Estrutua de repetição <i>INDEFINIDA</i>, ou seja, o usuário decide a quantidade de iteração; Traduzida como <i>'enquanto'</i> executa suas instruções com o teste lógico <strong>ANTES</strong> de executar a tarefa, desde que uma condição seja satisfeita.</p>
+                <h3>Do While</h3>
+                    <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
+                    <br>
+            <h2>DOM (Document Object Model)</h2>
                 <p> o DOM é o INTERMEDIADOR da COMUNICAÇÃO da linguagem JavaScript com as tecnologias HTML5 e CSS3.</p>
                 <p>saiba mais <a href="https://www.alura.com.br/artigos/o-que-e-o-dom?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=aud-456779235794:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQiAtaOtBhCwARIsAN_x-3KMlOx0ymL8ISqRoHFMZrVJHbdhuBNyM-RgEBMrsKRag9zPn4SnKKEaAgVnEALw_wcB" target="_blank" rel="external"> Clique aqui!</a></p>
                 <br>
@@ -250,30 +283,6 @@
                     <p><code>.toUpperCase() ---</code>Converte uma string para todas as letras maiúsculas; este método não altera seu valor original, apenas retorna uma outra string com caracteres maíusculs. </p>
                         <blockquote><p>importante observar como se comporta os valor no retorno de uma estrutura condicional; ¿array se comporta como string?</p></blockquote>
                     <br>
-                    <hr>
-            <h2>Estrutura de repeição</h2>
-                <p>Tecnicamente chamado de iteração, é utilizado para repetir um bloco de comando de acordo com a necessidade.</p>
-                <blockquote>
-                    <p><b>const string = it_string[symbol.iterator] --- </b> propriedade que transforma um objeto em um elemento iterável.</p>
-                    <p><b>.next() --- </b>método que prosssegui o próximo valor iteravel do objeto, caso obetenha sucesso, o console printa <b>"done: false" e o valor do elemento iterado.</b></p>
-                    <p>caso a coleção iterável chegue ao fim, o console printa <b>"done: true" e o valor do elemento é undefined</b></p>
-                </blockquote>
-                <br>
-                <h3>For</h3>
-                    <p>estrutura de repetição <i>DEFINIDO</i>, ou seja, é usado quando sabemos a quantidade de vezes que o bloco será iterado.</p>
-                <h3>While</h3>     
-                    <p>Estrutua de repetição <i>INDEFINIDA</i>, ou seja, o usuário decide a quantidade de iteração; Traduzida como <i>'enquanto'</i> executa suas instruções com o teste lógico <strong>ANTES</strong> de executar a tarefa, desde que uma condição seja satisfeita.</p>
-                <h3>DoWhile</h3>
-                    <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
-            <h2>Estrutura condicionais</h2>
-                <p>avalia uma condição, para que um bloco de instruções seja interpretada.</p>
-                <h3>If, Else if, else</h3>
-                    <p>condição composta que avalia uma condição, caso não seja satisfeita, avalia a proxima; e assim por diante...</p>
-                <h3>Switch</h3>
-                    <p>condicionais que trabalha com diferentes possibilidades de variáveis, gerando uma ampla possibilidades de casos.</p>
-                    <p><code>case 1: case 2: case3:</code> blocos de códigos guardado dentro de uma variável <code>case x:</code>, caso conveniente, execute a variável que lhe satisfaça</p>
-                    <p><code>break ---</code> comando que finaliza a leitura de um bloco de código <code>case X:</code>, caso ignorado, o programa continuará lendo o próximo bloco até encontrar um comando <i>break ou default</i></p>
-                    <p><code>default ---</code> comando que finaliza as condições, caso nenhuma das condições seja satisfeita.</p>
             <h2>Funções</h2>
                 <p>Quando um projeto começa a crescer, prescisamos de <i>Organização, Gerenciamento e Reusabilidade</i>; Portanto preecisamos reutilizar nosso código sem ter que ficar reesceevendo, neste contexto utilizamos as fuções.</p>
                 <br>
