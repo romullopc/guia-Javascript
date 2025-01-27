@@ -151,6 +151,8 @@
                     <br>
             <h2>Estrutura de repeição</h2>
                 <p>Tecnicamente chamado de iteração, é utilizado para repetir um bloco de comando de acordo com a necessidade.</p>
+                <p><code>break; </code> --- é uma condição que interrompe a execução de um loop e o finaliza.</p>
+                <p><code>continue; </code> --- é uma condição que interrompe a execução de um loop, porém, continua a execução da função apenas pulando a condição desejada.</p>
                 <br>
                 <h3>For</h3>
                 <p>sintaxe: <code class="codigo">for(let inicializador; condição; contador) {bloco a ser executado}</code></p>
@@ -163,10 +165,14 @@
                     <h3>While</h3>     
                     <p>Estrutua de repetição <i>INDEFINIDA</i>, enquanto a condição for verdadeira, <b>repita!</b></p>
                     <blockquote>
+                        <p>A iteração While analiza a condição antes de executar a função; caso a condição seja falsa, a função é ignorada e seguirá o algoritmo.</p>
                         <p>Quando se trata de estrutura de repetição INDEFINIDA, deve haver uma condição para que a função percorra e se torne falsa!<br> Caso a variavel analizada não sofra alterações, o loop se tornará infinito.</p>
                     </blockquote>
                 <h3>Do While</h3>
                     <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
+                    <blockquote>
+                        <p>A iteração Do...While analiza a condição no final da função, ou seja, a função será executada pelo menos uma vez e o teste lógico será realizado no final. <br> Caso a condição for verdadeira, repita! só encerrará a função quando a condição for falsa! <br> Deve haver alterações na variável que esta sendo analizada para que não entre em loop infinito.</p>
+                    </blockquote>
                     <br>
             <h2>DOM (Document Object Model)</h2>
                 <p> o DOM é o INTERMEDIADOR da COMUNICAÇÃO da linguagem JavaScript com as tecnologias HTML5 e CSS3.</p>
