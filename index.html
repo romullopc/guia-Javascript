@@ -155,19 +155,87 @@
                 <p><code>continue; </code> --- é uma condição que interrompe a execução de um loop, porém, continua a execução da função apenas pulando a condição desejada.</p>
                 <br>
                 <h3>For</h3>
-                <p>sintaxe: <code class="codigo">for(let inicializador; condição; contador) {bloco a ser executado}</code></p>
+                    <p>sintaxe: <code class="codigo">for(let inicializador; condição; contador) {bloco a ser executado}</code></p>
                     <p>estrutura de repetição <i>DEFINIDO</i>, ou seja, é usado quando sabemos a quantidade de vezes que o bloco será iterado.</p>
                     <blockquote>
                         <p>Estrutura de iteração <b>for</b> só será executa enquanto a condição for verdadeira.</p>
                         <p>observar que o contador será alterado antes mesmo de executar o bloco de código; e se o contador não for coerente com o teste, há possibilidade de entrar em loop infinito.</p>
                     </blockquote>
                     <hr>
-                    <h3>While</h3>     
+                <h3>While</h3>     
                     <p>Estrutua de repetição <i>INDEFINIDA</i>, enquanto a condição for verdadeira, <b>repita!</b></p>
                     <blockquote>
                         <p>A iteração While analiza a condição antes de executar a função; caso a condição seja falsa, a função é ignorada e seguirá o algoritmo.</p>
                         <p>Quando se trata de estrutura de repetição INDEFINIDA, deve haver uma condição para que a função percorra e se torne falsa!<br> Caso a variavel analizada não sofra alterações, o loop se tornará infinito.</p>
                     </blockquote>
+                <h2>Funções</h2>
+                    <p>Quando um projeto começa a crescer, prescisamos de <i>Organização, Gerenciamento e Reusabilidade</i>; Portanto preecisamos reutilizar nosso código sem ter que ficar reesceevendo, neste contexto utilizamos as fuções.</p>
+                    <br>
+                    <p><i>function  --- </i> são chamada de execução de blocos; Mas para função chamar um bloco, ela pode ser nomeada ou ser anônima.</p>
+                    <p><i>Bloco</i> --- </i> Conjunto de linhas de código Js que retorna o valor para uma função. os <i>'blocos' são delimitado por 'chaves' {}</i></p>
+                    <p><i>return --- </i> toda função necessita de apenas um <i>return</i>, pode ser em forma de string, numeral ou até mesmo retornar uma variável representando a resposta da função.</p>
+                    <blockquote>
+                        <p>O retorno da função necessita de uma variável para ser atribuida, caso não estaja vinculado a  nenhuma variável, confira o retorno no console.log. </p>
+                    </blockquote>
+                    <p><i>NaN --- </i> mensagem de erro 'Not a Number'; Significa que em alguma operação, há um número sem valor definido.</p>     
+                    <br>
+                    <h3>Função Simples</h3>
+                        <p>função declarada que necessita de uma chamada.</p>
+                        <br>
+                        <p><code class="codigo">Funciton nome(parâmetro){bloco}</code></p>
+                        <p><b>declaração da função - </b> por si, não executa a função, necessita da <b>chamada da função</b> para executar e retornar a função</p>
+                        <p><b>chamada da função - </b> para a função declarada executar, a chamada da função é essencial, contendo parâmetros que sera usada para orienta-la</p>
+                        <p><b>retorno - </b> o retorno é o resultado da execução da função, cada função retornará apenas 1 valor</p>
+                        <blockquote>
+                            <p>há possibilidade de usar uma única função para diferentes chamadas, evitando duplicar códigos</p>
+                        </blockquote>
+                        <br>
+                    <h3>Funções Anônimas</h3>
+                        <p>Também conhecida como<i>"funções em tempos de execução"</i>, são Funções que omitem o nome, e atribuída á uma variável, pois ela só é criada quando é chamada; ou seja, ela não ocupa um espaço na memória, ela só exestirá a partir da execução da variável atribuída</p>
+                        <br>
+                        <p>sintaxe: <code class="codigo"> const funçãoAnoniama = function(parâmetros){return}</code></p>
+                        <br>
+                        <h4>Arrow function</h4>
+                            <p>expressões arrow function também é uma função anônima criada a partir da ES6, que viabiliza uma forma mais consisa de codar.</p>
+                            <p>sintaxa: <code class="codigo"> const arrowFuncition = (parâmetros)=>{bloco return}</code></p>
+                            <blockquote>
+                                <p>° atribuir a função a uma 'variável'</p>
+                                <p>° omitir o nome da função e a palavra function</p>
+                                <p>º quando há apenas 1 parâmetro e o retorno for simples, omitir os parêntes e também as chaves. (conferir no meu repositório)</p>
+                            </blockquote>
+                            <br>
+                         <h4>constructor function</h4>
+                            <p>tipo de expressão anônima cujo o objetivo é criar funções com retorno simples.</p>
+                            <p>sintaxe: <code class="codigo">const functionConstructor = new Function('v1', 'v1', 'v3', 'return v1+v2+v3')</code></p>
+                            <blockquote>
+                                <p>° atribuir a função a uma 'variável'.</p>
+                                <p>° para declarar a função escreva 'new Function' (com F MAIÚSCULO).</p>
+                                <P>° separar os parâmetros com aspas e virgulas.</P>
+                                <p>° após a declaração do parâmetros, escreva return e a expressão desejada</p>
+                            </blockquote>
+                            <br>
+                    <h3>função REST</h3>
+                        <p>parâmetro rest, que permite que você passe um número variável de argumentos para uma função como um array. Isso é útil quando você não sabe de antemão quantos argumentos serão passados para a função.</p>
+                        <p><code class="codigo">function name(...valores){bloco}</code><p>
+                        <p><code>parâmetros --- </code> operador spread[...] é utilizado quando não sabe-se ao certo quantos elementos a função irá trabalhar.</p>
+                        <blockquote>    
+                            <p>operador spread transformará os parâmetros em um ARRAY.</p>
+                            <P>para percorrer por todos os elemens do array, usar o loop (<code>for of</code>), pois, é a forma mais recomandada a trabalhar com valores em um Array.</P>
+                        </blockquote>
+                        <br>
+                    <h3>Função geradora</h3>
+                        <p>É o pilar da programação assincrona, diferente das outras funções, a fução geradora pode interromper o processo e retornar um valor assim que for satisfeito.</p>
+                        <p>A declaração <b>function*</b>define uma função geradora (generator function), a própria função retorna um objeto Generator durante sua execução.</p>
+                        <p>exemplo.: <code class="codigo">function* contador(){bloco}</code></p>
+                        <p><code>const funçãoGeradora= contador() ---</code> para manipular a função geradora é necessario atribui-lá à uma variável.</p>
+                        <p>contador<code>.next().value --- </code> Método de chamada da função, com o objetivo de retornar a execução a partir do Yield encerrado.</p>
+                        <p><code>yield ---</code> é o ponto que caracteriza o retorno da função geradora, toda vez que chamado, a própria função encerra e retorna um valor; Da próxima vez que executado, retorna do ponto onde foi interrompido.</p>
+                        <blockquote>
+                            <p>° há possibilidade de atribuir o Yield a uma variável.<i>(repositório FunçãoGeradora.parte2).</i></p>
+                            <p>° importante o atributo <b>.value</b> para retorno do valor do yield.</p>
+                            <p>° há diferentes métodos de percorer uma função geradora, importante perceber qual melhor forma de retornar o Yield.</p>
+                        </blockquote>
+                        <br>
                 <h3>Do While</h3>
                     <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
                     <blockquote>
@@ -243,7 +311,6 @@
                     <p><code>("div>p") --- </code>método para manipular todas as <i>Tag 'p'</i> que estão incluídas na <i>Tag 'div'</i></p>
                     <p><code>('.classe:not(.outraClasse)') --- </code>sintaxe para manipular elemento que possui a ".classe", e não posssuem "outraClasse"</p>
                     <p><code>("input[type=radio]") --- </code>Sintaxa para manipular elemento que possui um input tipo radio.</p>
-                                        <br>
                 <h3>hierarquia DOM</h3>
                     <p>o DOM organiza a estrutura da página em uma árvore de elementos, permitindo que você acesse e manipule cada parte do documento usando JavaScript, possibilitando a orientação para manipulação de elementos a partir de sua posição hierárquica.</p>
                     <p><code>Document --- </code> Objeto raiz da página, que representa todo o documento.</p>
@@ -291,71 +358,6 @@
                     <p><code>.remove() --- </code> remover elemento diretamente pela variável atribuída.</p>
                     <p><code>.toUpperCase() ---</code>Converte uma string para todas as letras maiúsculas; este método não altera seu valor original, apenas retorna uma outra string com caracteres maíusculs. </p>
                         <blockquote><p>importante observar como se comporta os valor no retorno de uma estrutura condicional; ¿array se comporta como string?</p></blockquote>
-                    <br>
-            <h2>Funções</h2>
-                <p>Quando um projeto começa a crescer, prescisamos de <i>Organização, Gerenciamento e Reusabilidade</i>; Portanto preecisamos reutilizar nosso código sem ter que ficar reesceevendo, neste contexto utilizamos as fuções.</p>
-                <br>
-                <p><i>function  --- </i> são chamada de execução de blocos; Mas para função chamar um bloco, ela pode ser nomeada ou ser anônima.</p>
-                <p><i>Bloco</i> --- </i> Conjunto de linhas de código Js que retorna o valor para uma função. os <i>'blocos' são delimitado por 'chaves' {}</i></p>
-                <p><i>return --- </i> toda função necessita de apenas um <i>return</i>, pode ser em forma de string, numeral ou até mesmo retornar uma variável representando a resposta da função.</p>
-                <p><i>NaN --- </i> mensagem de erro 'Not a Number'; Significa que em alguma operação, há um número sem valor definido.</p>     
-                <br>
-                <h3>Função Simples</h3>
-                    <p>função declarada que necessita de uma chamada.</p>
-                    <br>
-                    <p><code class="codigo">Funciton nome(parâmetro){bloco}</code></p>
-                    <p><b>declaração da função - </b> por si, não executa a função, necessita da <b>chamada da função</b> para executar e retornar a função</p>
-                    <p><b>chamada da função - </b> para a função declarada executar, a chamada da função é essencial, contendo parâmetros que sera usada para orienta-la</p>
-                    <p><b>retorno - </b> o retorno é o resultado da execução da função, cada função retornará apenas 1 valor</p>
-                    <blockquote>
-                        <p>há possibilidade de usar uma única função para diferentes chamadas, evitando duplicar códigos</p>
-                    </blockquote>
-                    <br>
-                <h3>Funções Anônimas</h3>
-                    <p>Também conhecida como<i>"funções em tempos de execução"</i>, são Funções que omitem o nome, e atribuída á uma variável, pois ela só é criada quando é chamada; ou seja, ela não ocupa um espaço na memória, ela só exestirá a partir da execução da variável atribuída</p>
-                    <br>
-                    <p>sintaxe: <code class="codigo"> const funçãoAnoniama = function(parâmetros){return}</code></p>
-                    <br>
-                    <h4>Arrow function</h4>
-                        <p>expressões arrow function também é uma função anônima criada a partir da ES6, que viabiliza uma forma mais consisa de codar.</p>
-                        <p>sintaxa: <code class="codigo"> const arrowFuncition = (parâmetros)=>{bloco return}</code></p>
-                        <blockquote>
-                            <p>° atribuir a função a uma 'variável'</p>
-                            <p>° omitir o nome da função e a palavra function</p>
-                            <p>º quando há apenas 1 parâmetro e o retorno for simples, omitir os parêntes e também as chaves. (conferir no meu repositório)</p>
-                        </blockquote>
-                        <br>
-                     <h4>constructor function</h4>
-                        <p>tipo de expressão anônima cujo o objetivo é criar funções com retorno simples.</p>
-                        <p>sintaxe: <code class="codigo">const functionConstructor = new Function('v1', 'v1', 'v3', 'return v1+v2+v3')</code></p>
-                        <blockquote>
-                            <p>° atribuir a função a uma 'variável'.</p>
-                            <p>° para declarar a função escreva 'new Function' (com F MAIÚSCULO).</p>
-                            <P>° separar os parâmetros com aspas e virgulas.</P>
-                            <p>° após a declaração do parâmetros, escreva return e a expressão desejada</p>
-                        </blockquote>
-                        <br>
-                <h3>função REST</h3>
-                    <p>função com mais de 2 parâmetros</p>
-                    <p><code class="codigo">function name(...valores){bloco}</code><p>
-                    <p><code>parâmetros --- </code>Para trabalhar com função com mais de 2 parâmetros precisamos trabalhar com o operador spread[...]</p>
-                    <blockquote>    
-                        <p>operador spread transformará os parâmetros em um ARRAY.</p>
-                        <P>para percorrer por todos os elemens do array, usar o loop (<code>for of</code>), pois, é a forma mais recomandada a trabalhar com valores em um Array.</P>
-                    </blockquote>
-                    <br>
-                <h3>Função geradora</h3>
-                    <p>É o pilar da programação assincrona, diferente das outras funções, a fução geradora pode interromper o processo e retornar um valor assim que for satisfeito.</p>
-                    <p>A declaração <b>function*</b>define uma função geradora (generator function), a própria função retorna um objeto Generator durante sua execução.</p>
-                    <p>exemplo.: <code class="codigo">function* contador(){bloco}</code></p>
-                    <p><code>const funçãoGeradora= contador() ---</code> para manipular a função geradora é necessario atribui-lá à uma variável.</p>
-                    <p>contador<code>.next().value --- </code> Método de chamada da função, com o objetivo de retornar a execução a partir do Yield encerrado.</p>
-                    <p><code>yield ---</code> é o ponto que caracteriza o retorno da função geradora, toda vez que chamado, a própria função encerra e retorna um valor; Da próxima vez que executado, retorna do ponto onde foi interrompido.</p>
-                    <blockquote>
-                        <p>° há possibilidade de atribuir o Yield a uma variável.<i>(repositório FunçãoGeradora.parte2).</i></p>
-                        <p>° importante o atributo <b>.value</b> para retorno do valor do yield.</p>
-                        <p>° há diferentes métodos de percorer uma função geradora, importante perceber qual melhor forma de retornar o Yield.</p>
-                    </blockquote>
                     <br>
             <h2>Eventos</h2>
                 <br>
