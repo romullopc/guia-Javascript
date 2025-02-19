@@ -168,9 +168,13 @@
                         <p>A iteração While analiza a condição antes de executar a função; caso a condição seja falsa, a função é ignorada e seguirá o algoritmo.</p>
                         <p>Quando se trata de estrutura de repetição INDEFINIDA, deve haver uma condição para que a função percorra e se torne falsa!<br> Caso a variavel analizada não sofra alterações, o loop se tornará infinito.</p>
                     </blockquote>
+                <h3>Do While</h3>
+                    <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
+                    <blockquote>
+                        <p>A iteração Do...While analiza a condição no final da função, ou seja, a função será executada pelo menos uma vez e o teste lógico será realizado no final. <br> Caso a condição for verdadeira, repita! só encerrará a função quando a condição for falsa! <br> Deve haver alterações na variável que esta sendo analizada para que não entre em loop infinito.</p>
+                    </blockquote>
                 <h2>Funções</h2>
                     <p>Quando um projeto começa a crescer, prescisamos de <i>Organização, Gerenciamento e Reusabilidade</i>; Portanto preecisamos reutilizar nosso código sem ter que ficar reesceevendo, neste contexto utilizamos as fuções.</p>
-                    <br>
                     <p><i>function  --- </i> são chamada de execução de blocos; Mas para função chamar um bloco, ela pode ser nomeada ou ser anônima.</p>
                     <p><i>Bloco</i> --- </i> Conjunto de linhas de código Js que retorna o valor para uma função. os <i>'blocos' são delimitado por 'chaves' {}</i></p>
                     <p><i>return --- </i> toda função necessita de apenas um <i>return</i>, pode ser em forma de string, numeral ou até mesmo retornar uma variável representando a resposta da função.</p>
@@ -181,7 +185,6 @@
                     <br>
                     <h3>Função Simples</h3>
                         <p>função declarada que necessita de uma chamada.</p>
-                        <br>
                         <p><code class="codigo">Funciton nome(parâmetro){bloco}</code></p>
                         <p><b>declaração da função - </b> por si, não executa a função, necessita da <b>chamada da função</b> para executar e retornar a função</p>
                         <p><b>chamada da função - </b> para a função declarada executar, a chamada da função é essencial, contendo parâmetros que sera usada para orienta-la</p>
@@ -189,21 +192,17 @@
                         <blockquote>
                             <p>há possibilidade de usar uma única função para diferentes chamadas, evitando duplicar códigos</p>
                         </blockquote>
-                        <br>
                     <h3>Funções Anônimas</h3>
                         <p>Também conhecida como<i>"funções em tempos de execução"</i>, são Funções que omitem o nome, e atribuída á uma variável, pois ela só é criada quando é chamada; ou seja, ela não ocupa um espaço na memória, ela só exestirá a partir da execução da variável atribuída</p>
-                        <br>
                         <p>sintaxe: <code class="codigo"> const funçãoAnoniama = function(parâmetros){return}</code></p>
-                        <br>
                         <h4>Arrow function</h4>
                             <p>expressões arrow function também é uma função anônima criada a partir da ES6, que viabiliza uma forma mais consisa de codar.</p>
                             <p>sintaxa: <code class="codigo"> const arrowFuncition = (parâmetros)=>{bloco return}</code></p>
                             <blockquote>
                                 <p>° atribuir a função a uma 'variável'</p>
-                                <p>° omitir o nome da função e a palavra function</p>
-                                <p>º quando há apenas 1 parâmetro e o retorno for simples, omitir os parêntes e também as chaves. (conferir no meu repositório)</p>
+                                <p>° Adicionar parâmetros entre parênteses.</p>
+                                <p>º quando há apenas 1 parâmetro e o retorno for simples, omitir os parêntes e também as chaves.</p>
                             </blockquote>
-                            <br>
                          <h4>constructor function</h4>
                             <p>tipo de expressão anônima cujo o objetivo é criar funções com retorno simples.</p>
                             <p>sintaxe: <code class="codigo">const functionConstructor = new Function('v1', 'v1', 'v3', 'return v1+v2+v3')</code></p>
@@ -213,7 +212,6 @@
                                 <P>° separar os parâmetros com aspas e virgulas.</P>
                                 <p>° após a declaração do parâmetros, escreva return e a expressão desejada</p>
                             </blockquote>
-                            <br>
                     <h3>função REST</h3>
                         <p>parâmetro rest, que permite que você passe um número variável de argumentos para uma função como um array. Isso é útil quando você não sabe de antemão quantos argumentos serão passados para a função.</p>
                         <p><code class="codigo">function name(...valores){bloco}</code><p>
@@ -224,24 +222,17 @@
                         </blockquote>
                         <br>
                     <h3>Função geradora</h3>
-                        <p>É o pilar da programação assincrona, diferente das outras funções, a fução geradora pode interromper o processo e retornar um valor assim que for satisfeito.</p>
-                        <p>A declaração <b>function*</b>define uma função geradora (generator function), a própria função retorna um objeto Generator durante sua execução.</p>
+                        <p>É o pilar da programação assincrona; diferente das outras funções, para criar uma função geradora, você pode usar a função <code>function*</code> e a palavra-chave <code>yield</code>. As funções geradoras permitem que você pause a execução e depois retorne ao ponto onde ela foi pausada, mantendo seu estado ao longo das execuções.</p>
+                        <p>A declaração <b>function*</b> define uma função geradora (generator function), a própria função retorna um objeto Generator durante sua execução.</p>
                         <p>exemplo.: <code class="codigo">function* contador(){bloco}</code></p>
                         <p><code>const funçãoGeradora= contador() ---</code> para manipular a função geradora é necessario atribui-lá à uma variável.</p>
-                        <p>contador<code>.next().value --- </code> Método de chamada da função, com o objetivo de retornar a execução a partir do Yield encerrado.</p>
+                        <p>contador<code>.next().value --- </code> Método de chamada da função, com o objetivo de retornar um valor e a execução a partir do Yield encerrado.</p>
                         <p><code>yield ---</code> é o ponto que caracteriza o retorno da função geradora, toda vez que chamado, a própria função encerra e retorna um valor; Da próxima vez que executado, retorna do ponto onde foi interrompido.</p>
                         <blockquote>
                             <p>° há possibilidade de atribuir o Yield a uma variável.<i>(repositório FunçãoGeradora.parte2).</i></p>
-                            <p>° importante o atributo <b>.value</b> para retorno do valor do yield.</p>
+                            <p>° importante o atributo <b>.value</b> para incrementar o valor do parâmetro do yield.</p>
                             <p>° há diferentes métodos de percorer uma função geradora, importante perceber qual melhor forma de retornar o Yield.</p>
                         </blockquote>
-                        <br>
-                <h3>Do While</h3>
-                    <p>A instrução do...while repetirá até que a condição especificada seja <strong>falsa</strong>. Caso condição seja verdade, então o laço será executado novamente. Ao final de cada execução, condição é verificado. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while..</p>
-                    <blockquote>
-                        <p>A iteração Do...While analiza a condição no final da função, ou seja, a função será executada pelo menos uma vez e o teste lógico será realizado no final. <br> Caso a condição for verdadeira, repita! só encerrará a função quando a condição for falsa! <br> Deve haver alterações na variável que esta sendo analizada para que não entre em loop infinito.</p>
-                    </blockquote>
-                    <br>
             <h2>DOM (Document Object Model)</h2>
                 <p> o DOM é o INTERMEDIADOR da COMUNICAÇÃO da linguagem JavaScript com as tecnologias HTML5 e CSS3.</p>
                 <p>saiba mais <a href="https://www.alura.com.br/artigos/o-que-e-o-dom?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=aud-456779235794:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQiAtaOtBhCwARIsAN_x-3KMlOx0ymL8ISqRoHFMZrVJHbdhuBNyM-RgEBMrsKRag9zPn4SnKKEaAgVnEALw_wcB" target="_blank" rel="external"> Clique aqui!</a></p>
