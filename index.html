@@ -240,10 +240,6 @@
                 <p><i>Elements</i> --- Tudo constitui um <i>document html</i>; Quando manipulado também é conhecido como <i>object</i>.</p>
                 <p><i>parent</i> --- Também conhecido como elemento <i>pai</i>, representa os maiores títulos de hierarquia num documento html; exemplo, <i>html</i> é <i>parent</i> de <i>head</i> e <i>body</i>.</p>
                 <p><i>child</i> --- Também conhecido como elemento <i>filho</i>, pois representa títulos subjacentes na hierarquia de um documento html; por exemplo, <i>title</i> é <i>child</i> de <i>head</i>.</p>
-                <p></p>
-                <p><code>elemento=  el.target --- </code>Após criar uma Arrow Function, percorra pelo valor, para manipular o elemento capturado.</p>
-                <p><code>x.style.atibuto = 'valor'</code> --- Após declarar uma <i>var</i> atravez do DOM, poderá manipular as CSS do document html.</p>
-                <br>
                 <h3 class="secundario">Manipulação de objetos DOM</h3>
                     <br>
                 <h3>por Marca (TagName)</h3>
@@ -254,25 +250,29 @@
                     <p>passo 3 --- entre parênteses informe quais <code>tag's</code> serão manipuladas. (manipulação por MARCA trabalha com inúmeras tag's)</p>
                     <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
                     <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
-                    <br>
+                    <blockquote>
+                        <p>Quando captura o elemento html por <i>tag name</i> retorna o um <i>HTML collection</i>, que é um coleção não iteravel dos elemento html capturado no <abbr title=" Document Object Model">DOM</abbr>. Para converter um html collection em um array, utiliza-se o operador <b>spread [...]</b>.</p>
+                    </blockquote>
+                    <hr>
                 <h3>por ID</h3>
                     <p>manipular DOM por ID (único)</p>
                     <p>sintaxe: <code class="codigo">const elemento = document.GetElementById('x')</code></p>
-                    <p>passo 1 --- declarar a var e o elemento que deseja manipular.(ID tag)</p>
+                    <p>passo 1 --- declarar a var e atribuir o elemento por ID.</p>
                     <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
-                    <p>passo 3 --- entre parênteses informe qual <code> O ID da tag</code> que será manipulada. (manipulação por ID é única.)</p>
-                    <p>const novoElemento =<code> document.createElement("div")</code> --- criar um elemento com a tag "DIV" e atribuir a uma constante. </p>
-                    <p>novoElemento<code> .setAttributte ('id', 'nome do id')</code> --- adicionar ou alterar qualque atributos de um elemento criado.</p>
-                    <br>
+                    <p>passo 3 --- entre parênteses informe qual <code> O ID do elemento</code> que será manipulado. (manipulação por ID é única.)</p>
+                    <hr>
                 <h3>por Class</h3>
-                    <p>manipular DOM por Class (multiplas 'tag') </p>
-                    <p><code class="codigo">getElementsByClassName('x')[x]</code></p>
-                    <p>passo 1 --- declarar a var e o elemento que deseja manipular e criar uma classe, um elemento pode conter mais de uma classe.</p>
-                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                    <p>manipular DOM por Class (multiplas 'tag') de forma genérica. </p>
+                    <p><code class="codigo">const elementos= getElementsByClassName('x')[x]</code></p>
+                    <p>passo 1 --- criar uma constante e atribui-la  por classes dos elementos html.</p>
+                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método).</p>
                     <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Class são genéricas.)</p>
                     <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
                     <p>passo 5 --- caso retornar uma classe com mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
-                    <br>
+                    <blockquote>
+                        <p>Quando captura o elemento html por <i>Class name</i> retorna o um <i>HTML collection</i>, que é um coleção não iteravel dos elemento html capturado no <abbr title=" Document Object Model">DOM</abbr>. Para converter um html collection em um array, utiliza-se o operador <b>spread [...]</b>.</p>
+                    </blockquote>
+                    <hr>
                     <h4>atributos de classes</h4>
                         <p><code>x.classlist.add("c2") --- </code> Para adicionar a classe "c2" ao elemento "x" </p>
                         <p><code>x.classelist.remove("c2") --- </code>Para remover a classe "c2" do element"x"</p>
@@ -285,23 +285,25 @@
                     <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
                     <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Name são genéricas.)</p>
                     <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
-                    <br>
-                <h3>por Selector</h3>
+                    <hr>
+                <h3>por QuerrySelector</h3>
                     <p><code class="codigo">querySelector</code> ---  é um método mais dinâmico permitindo trabalhar com diversos atributos</p>
                     <br>
-                    <p>passo 1 --- declarar a var e o elemento que deseja manipular.(selector tag)</p>
+                    <p>passo 1 --- declarar a var e atribuir-la a um elemento.</p>
                     <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
                     <p>passo 3 --- entre parênteses informe quais <code>tag's (class ou Id)</code> seram manipuladas. (observar a pontuação, e extender com o <i>valor</i> da class ou Id)</p>
                     <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
                     <p>passo 6 --- caso deseja manipular uma tag específica dentro as multiplas tag's, utilize <b>[x]</b>.</p>
-                    <br>
+                    
                     <p><code>("div") --- </code> método que trabalha com o primeiro elemento da tag mencionada, para manipular um elemento específico utilize <b>[x]</b>.</p>
                     <p><code>(".class") --- </code>método que trabalha com os elementos por classe.</p>
                     <p><code>("#id") --- </code>método que trabalha com elementos por id.</p>
+                    <p><code>("div, p") --- </code>método que manipulam elementos das <i>tag's</i> <b>div</b> e <b>p</b>.</p>
                     <p><code>("div[.class]") --- </code>método que trabalha com todos elementos <i>div</i> que possuem o <i>atributo class</i>.</p>
                     <p><code>("div>p") --- </code>método para manipular todas as <i>Tag 'p'</i> que estão incluídas na <i>Tag 'div'</i></p>
                     <p><code>('.classe:not(.outraClasse)') --- </code>sintaxe para manipular elemento que possui a ".classe", e não posssuem "outraClasse"</p>
                     <p><code>("input[type=radio]") --- </code>Sintaxa para manipular elemento que possui um input tipo radio.</p>
+                    <hr>
                 <h3>hierarquia DOM</h3>
                     <p>o DOM organiza a estrutura da página em uma árvore de elementos, permitindo que você acesse e manipule cada parte do documento usando JavaScript, possibilitando a orientação para manipulação de elementos a partir de sua posição hierárquica.</p>
                     <p><code>Document --- </code> Objeto raiz da página, que representa todo o documento.</p>
@@ -309,7 +311,6 @@
                     <p><code>Attributes --- </code>São propriedades que os elementos podem ter, permitem definir caracteristicas que os elementos podem conter.</p>
                     <p><code>Text --- </code>Representam os conteúdos textual dentro das tags, podem ser acessados usando as propriedades TextContent ou innerText.</p>
                     <p><code>comentários e utros tipos --- </code> Além dos elementos e atributos o DOM também incui outros tipos de nós, como comentarios e declaração de tipo de documento "!DOCTYPE html"</p>
-                    <hr>
                     <p><code>parent --- </code> "Elemento pai", elemento de maior referência quando se trata de hierarquia DOM.</p>
                     <p><code>children --- </code>"Elemento filho", elemento contido dentro de outro. (elementos filhos recebem classes e propriedades do elemento pai.)</p> 
                     <p><code>sibling --- </code>"Elementos irmãos", elemento de mesma referência na hierarquia DOM</p>
@@ -339,17 +340,19 @@
                     <p>º com o método .appendChild(), anexe o elemento criado ao 'Parent' desejado.</p>
                 </blockquote>
                 <hr>
-                <h3>propriedades bastante utilizadas</h3>
+                <h3>propriedades</h3>
                     <p><code>innerText ou innerHTML= " " ---</code>adicionar ou alterar texto do elemento</p>   
-                    <br>
-                <h3>métodos bastante utilizadas</h3>
                     <p><code>.setAttribute('atributo', 'valor') ---</code>adicionar atributos no elemento criado pelo JavaScript</p>
+                    <p><code>.classList.add(" ") --- </code>adicionar classe a um elemento.</p>
+                    <blockquote>
+                        <p>dentro da propriedade classList há outros atributos que manipulam a classe do elemento como <b>.remove()</b> e <b>.toggle()</b></p>
+                    </blockquote>
                     <p><code>.appendChild( ) --- </code>anexar um elemento filho ao 'Parent' desejado.</p>
                     <p><code>.removeChild( ) ---</code>remover elemento filho em relação ao elemento 'Parent' (utilizar no    evento de click)</p>
                     <p><code>.remove() --- </code> remover elemento diretamente pela variável atribuída.</p>
                     <p><code>.toUpperCase() ---</code>Converte uma string para todas as letras maiúsculas; este método não altera seu valor original, apenas retorna uma outra string com caracteres maíusculs. </p>
-                        <blockquote><p>importante observar como se comporta os valor no retorno de uma estrutura condicional; ¿array se comporta como string?</p></blockquote>
-                    <br>
+                    
+                    <hr>
             <h2>Eventos</h2>
                 <br>
                 <p>Eventos são interações do usuário com elementos html, invocando uma <i>Rotina JavaScripit</i>, em resposta ao mesmo específicado.</p>
@@ -381,39 +384,33 @@
                     <blockquote>
                         <p>caso esteja trabalhando com Array, utilize o método map() para percorrer os elementos, assim, possibilitando a manipulação.</p>
                     </blockquote> 
-                <hr>
                 <h3>Tipos de eventos:</h3>
-                    <br>
                     <h4>Mouse</h4>
-
                         <p>toda ação que ocorre com mouse ao ter contato com uma função já nomeada. Para mais <i>eventos de mouse</i><a href="https://desenvolvimentoparaweb.com/javascript/eventos-javascript/" target="_blank" rel="external"> Clique aqui!</a></p>
                         <p><code>'click'</code> --- Quando é pressionado e liberado o botão primario do <i>mouse, trackpad, etc.</i></p>
                         <p><code>'mousemove'</code> --- Sempre que o cursor do mouse se move sobre um elemento. <!-- (? dentro da div?) --></p>
                         <p><code>'mouseenter' / 'mouseover'</code> --- Quando o cursor do mouse entra nos limites de um elemento.</p>
                         <p><code>'mouseout'</code> --- Quando o cursor do mouse se move para fora do limite de um elemento.</p>
-                    <hr>
                 <h3>métodos Eventos</h3>
-                <br>
-                <p>são funções prontas com objetivo de trabalhar com os eventos</p>
-                <p><code>evento.stopPropagation() --- </code> método que neutraliza a propagação do evento aos seus <i>childs</i>, contudo, obtém melhor controle de quem dispara o evento.</p>
+                    <p>são funções prontas com objetivo de trabalhar com os eventos</p>
+                    <p><code>evento.stopPropagation() --- </code> método que neutraliza a propagação do evento aos seus <i>childs</i>, contudo, obtém melhor controle de quem dispara o evento.</p>
             <h2>Arrays</h2>
                 <p><strong>Array ,Vetores ou variável composta</strong>, são uma estrutura de dados que serve para guardar <i>elementos</i> em um espaço da memória. Estes espaços da memória são chamados de variáveis.</p>
                 <br>
                 <p><strong>Elementos --- </strong> é composto por <i>espaço da memória, valor e índice</i> </p>
                 <p><strong>Índice ---</strong> também conhecido como <i>chave ou Key</i></p>
                 <p><strong>Valor --- </strong> conteúdo armazenado dentro dos elentos.</p>
-                <br>
+                <hr>
                 <h3>For(in or of )</h3>
                     <p>estrutura de repetição criada exclusivamente para manipulação de objetos (Arrays). Geralmente<i> optado quando precisamos de interromper</i> durante o percorrimento de um loop ou array.</p>
                     <p><code>for(n in num) --- </code> ao iterar um array, for(in) é utilizado para percorer pelo índice<i>(indice key = n)</i> elementos<i>(object = num)</i></p>
                     <p><code>for (n of num) --- </code>ao iterar um array, for(of) é utilizado para iterar pelos elementos <i>(valor do object)</i></p>
-                    <br>
+                    <hr>
                 <h3>.map( )</h3>
-                <p>sintaxe: <code class="codigo"> array.map((ele, indice)=>{bloco})</code></p>
+                    <p>sintaxe: <code class="codigo"> array.map((ele, ind, array)=>{bloco})</code></p>
                     <p>método que manipula uma variável vinculada a um Array,com objetivo de percorrer <i>todos elementos (sem exceção)</i> retornando uma função, objeto ou elemento. Diferente dos loops, que podem ser interrompidos.</p>
-                    <p>Quando precisar retornar um elemento já percorrido pelo .map(), lembrar de atribuir uma nova variável que receberá o retorno, pois, o array inicial continuará com os valores iniciais.</p>
-                    
-                    <br>
+                    <p>Quando precisar retornar um elemento já percorrido pelo .map(), lembrar de atribuir uma nova variável que receberá o retorno, pois, o array inicial continuará com os valores iniciais.</p>        
+                    <hr>
                 <h3>.filter( )</h3>
                     <p>sintaxe: </p>
                     <p><code class="codigo">const numeros=[1, 2, 3, 4, 5, 6, 7]</code></p>
@@ -422,7 +419,6 @@
                         <p>há diferentes formas de criar uma função com método .filter(), o <i>'callback'</i>, poderia ser uma função separada.</p>
                         <p>neste caso, foi utilizado uma ArrowFunction diretamente no .filter()</p>
                     </blockquote>
-                    <br>
                     <p>o método .filter() é uma forma de percorrer o Array e retornar um Array filtrado de acordo com a função desejada.</p>
                     <hr>
                 <h3>.Find( )</h3>
