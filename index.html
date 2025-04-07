@@ -241,83 +241,94 @@
                 <p><i>parent</i> --- Também conhecido como elemento <i>pai</i>, representa os maiores títulos de hierarquia num documento html; exemplo, <i>html</i> é <i>parent</i> de <i>head</i> e <i>body</i>.</p>
                 <p><i>child</i> --- Também conhecido como elemento <i>filho</i>, pois representa títulos subjacentes na hierarquia de um documento html; por exemplo, <i>title</i> é <i>child</i> de <i>head</i>.</p>
                 <h3 class="secundario">Manipulação de objetos DOM</h3>
-                    <br>
-                <h3>por Marca (TagName)</h3>
-                    <p>uma forma de manipular inúmeras <i>'tags'.</i> de forma genérica.</p>
-                    <p>sintaxe: <code class="codigo">const elemento = document.GetElementsByTagName('x')[x]</code></p>
-                    <p>passo 1 --- declarar a constante e atribuir ao elemento que deseja manipular.(tag object)</p>
-                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
-                    <p>passo 3 --- entre parênteses informe quais <code>tag's</code> serão manipuladas. (manipulação por MARCA trabalha com inúmeras tag's)</p>
-                    <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
-                    <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
-                    <blockquote>
-                        <p>Quando captura o elemento html por <i>tag name</i> retorna o um <i>HTML collection</i>, que é um coleção não iteravel dos elemento html capturado no <abbr title=" Document Object Model">DOM</abbr>. Para converter um html collection em um array, utiliza-se o operador <b>spread [...]</b>.</p>
-                    </blockquote>
-                    <hr>
-                <h3>por ID</h3>
-                    <p>manipular DOM por ID (único)</p>
-                    <p>sintaxe: <code class="codigo">const elemento = document.GetElementById('x')</code></p>
-                    <p>passo 1 --- declarar a var e atribuir o elemento por ID.</p>
-                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
-                    <p>passo 3 --- entre parênteses informe qual <code> O ID do elemento</code> que será manipulado. (manipulação por ID é única.)</p>
-                    <hr>
-                <h3>por Class</h3>
-                    <p>manipular DOM por Class (multiplas 'tag') de forma genérica. </p>
-                    <p><code class="codigo">const elementos= getElementsByClassName('x')[x]</code></p>
-                    <p>passo 1 --- criar uma constante e atribui-la  por classes dos elementos html.</p>
-                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método).</p>
-                    <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Class são genéricas.)</p>
-                    <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
-                    <p>passo 5 --- caso retornar uma classe com mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
-                    <blockquote>
-                        <p>Quando captura o elemento html por <i>Class name</i> retorna o um <i>HTML collection</i>, que é um coleção não iteravel dos elemento html capturado no <abbr title=" Document Object Model">DOM</abbr>. Para converter um html collection em um array, utiliza-se o operador <b>spread [...]</b>.</p>
-                    </blockquote>
-                    <hr>
-                    <h4>atributos de classes</h4>
-                        <p><code>x.classlist.add("c2") --- </code> Para adicionar a classe "c2" ao elemento "x" </p>
-                        <p><code>x.classelist.remove("c2") --- </code>Para remover a classe "c2" do element"x"</p>
-                        <p><code>x.classe.toggle("c2")--- Alternar ? ativar uma função durante o funcionamento da chamadA ? <- aprofundamento JQuery </code></p>
+                    <h4>por Marca (TagName)</h4>
+                        <p>uma forma de manipular inúmeras <i>'tags'.</i> de forma genérica.</p>
+                        <p>sintaxe: <code class="codigo">const elemento = document.GetElementsByTagName('x')[x]</code></p>
+                        <p>passo 1 --- declarar a constante e atribuir ao elemento que deseja manipular.(tag object)</p>
+                        <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                        <p>passo 3 --- entre parênteses informe quais <code>tag's</code> serão manipuladas. (manipulação por MARCA trabalha com inúmeras tag's)</p>
+                        <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
+                        <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
+                        <blockquote>
+                            <p>Quando captura o elemento html por <i>tag name</i> retorna o um <i>HTML collection</i>, que é um coleção não iteravel dos elemento html capturado no <abbr title=" Document Object Model">DOM</abbr>. Para converter um html collection em um array, utiliza-se o operador <b>spread [...]</b>.</p>
+                        </blockquote>
+                        <hr>
+                    <h4>por ID</h4>
+                        <p>manipular DOM por ID (único)</p>
+                        <p>sintaxe: <code class="codigo">const elemento = document.GetElementById('x')</code></p>
+                        <p>passo 1 --- declarar a var e atribuir o elemento por ID.</p>
+                        <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                        <p>passo 3 --- entre parênteses informe qual <code> O ID do elemento</code> que será manipulado. (manipulação por ID é única.)</p>
+                        <hr>
+                    <h4>por Class</h4>
+                        <p>manipular DOM por Class (multiplas 'tag') de forma genérica. </p>
+                        <p><code class="codigo">const elementos= getElementsByClassName('x')[x]</code></p>
+                        <p>passo 1 --- criar uma constante e atribui-la  por classes dos elementos html.</p>
+                        <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método).</p>
+                        <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Class são genéricas.)</p>
+                        <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
+                        <p>passo 5 --- caso retornar uma classe com mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
+                        <blockquote>
+                            <p>Quando captura o elemento html por <i>Class name</i> retorna o um <i>HTML collection</i>, que é um coleção não iteravel dos elemento html capturado no <abbr title=" Document Object Model">DOM</abbr>. Para converter um html collection em um array, utiliza-se o operador <b>spread [...]</b>.</p>
+                        </blockquote>
+                        <hr>
+                        <h5>atributos de classes</h5>
+                            <p><code>x.classlist.add("c2") --- </code> Para adicionar a classe "c2" ao elemento "x" </p>
+                            <p><code>x.classelist.remove("c2") --- </code>Para remover a classe "c2" do element"x"</p>
+                            <p><code>x.classe.toggle("c2")--- Alternar ? ativar uma função durante o funcionamento da chamadA ? <- aprofundamento JQuery </code></p>
+                            <br>
+                    <h4>por Name</h4>
+                        <p>manipular DOM por Name (multiplas'tag') </p>
+                        <p>sintaxe: <code class="codigo">const elemento = document.GetElementsByName('x')[x]</code></p>
+                        <p>passo 1 --- declarar a constante e atribuir o elemento que deseja manipular.(name tag)</p>
+                        <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                        <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Name são genéricas.)</p>
+                        <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
+                        <hr>
+                    <h4>por QuerrySelector</h4>
+                        <p><code class="codigo">querySelector</code> ---  é um método mais dinâmico permitindo trabalhar com diversos atributos</p>
                         <br>
-                <h3>por Name</h3>
-                    <p>manipular DOM por Name (multiplas'tag') </p>
-                    <p>sintaxe: <code class="codigo">const elemento = document.GetElementsByName('x')[x]</code></p>
-                    <p>passo 1 --- declarar a constante e atribuir o elemento que deseja manipular.(name tag)</p>
-                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
-                    <p>passo 3 --- entre parênteses informe quais <code>tag's</code> seram manipuladas. (manipulação por Name são genéricas.)</p>
-                    <p>passo 4 --- entre <i>colchetes</i> informe qual <i>tag</i> específica desejamos manipular. (a primeira <i>tag</i> comça no [0])</p>
-                    <hr>
-                <h3>por QuerrySelector</h3>
-                    <p><code class="codigo">querySelector</code> ---  é um método mais dinâmico permitindo trabalhar com diversos atributos</p>
-                    <br>
-                    <p>passo 1 --- declarar a var e atribuir-la a um elemento.</p>
-                    <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
-                    <p>passo 3 --- entre parênteses informe quais <code>tag's (class ou Id)</code> seram manipuladas. (observar a pontuação, e extender com o <i>valor</i> da class ou Id)</p>
-                    <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
-                    <p>passo 6 --- caso deseja manipular uma tag específica dentro as multiplas tag's, utilize <b>[x]</b>.</p>
-                    
-                    <p><code>("div") --- </code> método que trabalha com o primeiro elemento da tag mencionada, para manipular um elemento específico utilize <b>[x]</b>.</p>
-                    <p><code>(".class") --- </code>método que trabalha com os elementos por classe.</p>
-                    <p><code>("#id") --- </code>método que trabalha com elementos por id.</p>
-                    <p><code>("div, p") --- </code>método que manipulam elementos das <i>tag's</i> <b>div</b> e <b>p</b>.</p>
-                    <p><code>("div[.class]") --- </code>método que trabalha com todos elementos <i>div</i> que possuem o <i>atributo class</i>.</p>
-                    <p><code>("div>p") --- </code>método para manipular todas as <i>Tag 'p'</i> que estão incluídas na <i>Tag 'div'</i></p>
-                    <p><code>('.classe:not(.outraClasse)') --- </code>sintaxe para manipular elemento que possui a ".classe", e não posssuem "outraClasse"</p>
-                    <p><code>("input[type=radio]") --- </code>Sintaxa para manipular elemento que possui um input tipo radio.</p>
-                    <hr>
+                        <p>passo 1 --- declarar a var e atribuir-la a um elemento.</p>
+                        <p>passo 2 --- fazer o trajeto respeitando a hierarquia DOM (método)</p>
+                        <p>passo 3 --- entre parênteses informe quais <code>tag's (class ou Id)</code> seram manipuladas. (observar a pontuação, e extender com o <i>valor</i> da class ou Id)</p>
+                        <p>passo 5 --- caso retornar mais de um elemento, use o operador spread[...] para transformalo num vetor, permitindo maipula-lo</p>
+                        <p>passo 6 --- caso deseja manipular uma tag específica dentro as multiplas tag's, utilize <b>[x]</b>.</p>
+                        
+                        <p><code>("div") --- </code> método que trabalha com o primeiro elemento da tag mencionada, para manipular um elemento específico utilize <b>[x]</b>.</p>
+                        <p><code>(".class") --- </code>método que trabalha com os elementos por classe.</p>
+                        <p><code>("#id") --- </code>método que trabalha com elementos por id.</p>
+                        <p><code>("div, p") --- </code>método que manipulam elementos das <i>tag's</i> <b>div</b> e <b>p</b>.</p>
+                        <p><code>("div[.class]") --- </code>método que trabalha com todos elementos <i>div</i> que possuem o <i>atributo class</i>.</p>
+                        <p><code>("div>p") --- </code>método para manipular todas as <i>Tag 'p'</i> que estão incluídas na <i>Tag 'div'</i></p>
+                        <p><code>('.classe:not(.outraClasse)') --- </code>sintaxe para manipular elemento que possui a ".classe", e não posssuem "outraClasse"</p>
+                        <p><code>("input[type=radio]") --- </code>Sintaxa para manipular elemento que possui um input tipo radio.</p>
+                        <hr>
                 <h3>hierarquia DOM</h3>
-                    <p>o DOM organiza a estrutura da página em uma árvore de elementos, permitindo que você acesse e manipule cada parte do documento usando JavaScript, possibilitando a orientação para manipulação de elementos a partir de sua posição hierárquica.</p>
+                    <p>O DOM organiza a estrutura da página em uma árvore de elementos, permitindo que você acesse e manipule cada parte do documento usando JavaScript, possibilitando a orientação para manipulação de elementos a partir de sua posição hierárquica.</p>
                     <p><code>Document --- </code> Objeto raiz da página, que representa todo o documento.</p>
                     <p><code>Elements --- </code>Representam as tags HTML; são blocos de construção da estrutura da página.</p>
                     <p><code>Attributes --- </code>São propriedades que os elementos podem ter, permitem definir caracteristicas que os elementos podem conter.</p>
-                    <p><code>Text --- </code>Representam os conteúdos textual dentro das tags, podem ser acessados usando as propriedades TextContent ou innerText.</p>
+                    <p><code>Text --- </code>Representam os conteúdos textual dentro das tags, podem ser acessadogit stats usando as propriedades TextContent ou innerText.</p>
                     <p><code>comentários e utros tipos --- </code> Além dos elementos e atributos o DOM também incui outros tipos de nós, como comentarios e declaração de tipo de documento "!DOCTYPE html"</p>
                     <p><code>parent --- </code> "Elemento pai", elemento de maior referência quando se trata de hierarquia DOM.</p>
                     <p><code>children --- </code>"Elemento filho", elemento contido dentro de outro. (elementos filhos recebem classes e propriedades do elemento pai.)</p> 
                     <p><code>sibling --- </code>"Elementos irmãos", elemento de mesma referência na hierarquia DOM</p>
                     <br>
                 <h3>propriedades</h3>
-                    <p><code>childNodes: --- </code>Propriedade que retorna um NodeList() com a quantidade de nós que o elemento faz, (incluindo textos e comentários.)</p>
+                    <p> propriedade é uma característica de um objeto, ou seja, uma associação entre um nome e um valor. As propriedades definem os atributos e características dos objetos.</p>
+                        <blockquote id="citacao_propriedade" class="blockquote">
+                            <p>Propriedade javascript é representanda por um paralelepipedo azul, diferenciando de um método que é uma caixa roxa;</p>
+                            <p>quando se trata de propriedade de um elemento, não necessita do usp de aspas <b>""</b></p>
+                        </blockquote>
+                    <p><code>childNodes: --- </code>Propriedade que retorna um NodeList() com a quantidade de nós que o elemento faz.</p>
+                        <blockquote id="citacao_childNodes" class="blockquote">
+                            <p>Inspecionando a página web, retorna um <i>nodeList()</i>, este tipo de analise retorna elementos, textos e comentarios.</p>
+                        </blockquote>
                     <p><code>children: --- </code> Propriedade que retorna um HTMLCollection() com a quantidade de elementos filhos(child).</p>
+                        <blockquote id="citacao_children" class="blockquote">
+                            <p>diferente do <i>childNods</i>, a propriedade <i>children</i> retorna apenas os elementos filhos.</p>
+                            <p>Para selecionar um <i>children especifico</i>, posteriormente, inclua <b>[ ]</b> e o indice que se encontra o elemento.</p>
+                        </blockquote>
                     <p><code>firstElementChild: --- </code>Propriedade que retorna o primeiro elemento filho encontrado; relacionado ao elemento selecionado. </p>
                     <p><code>lastElementChild: --- </code> Propriedade que retorna o último elemento filho encontrado; relacionado ao elemento selecionado.</p>
                     <p><code>nextElementSibling: --- </code> Propriedade que retorna o póximo elemento de mesma "hierarquia", (elementos irmãos).</p>
@@ -325,12 +336,12 @@
                     <p><code>parentElement: --- </code> Propriedade que retorna o elemento Parent; relacionado ao elemento selecionado. </p>
                     <p><code>insertBefore(novoElemento, elementoDeReferência) --- </code> inserir novo elemento antes do nó de referência</p>
                     <p><code>insertBefore(novoElemento, elementoDeReferência.nextSinbling) --- </code> inserir novo elemento antes do nó de referência(observe que a referência é o próximo irmão)  </p>
-                    <p><code>.hasChildNodes() ---</code> Método que retorna ture ou false (teste lógico ou Booleanos), caso o elemento tiver "filhos".</p>
+                    <p><code>.hasChildNodes() ---</code> Método que retorna true ou false (teste lógico ou Booleanos), caso o elemento tiver "filhos".</p>
                     <blockquote>
-                        <p>.hasChildNodes() não é um método muito eficas , pois, retornam 'true' contando os nós de textos.</p>
-                        <p>melhor forma é uma estrutura condicional 'ternária',</p>
+                        <p>quando for utilizar o método <i>hasChildNodes().length</i>, certifique-se de converter em bit <b>0 ou 1</b>, tornando útil na aplicação em testes lógicos.</p>
+                        <p>estrutura condicional 'ternária' é uma ótima forma de retorno de teste lógicos <i>booleanos</i>.</p>
                     </blockquote>
-                    <br>
+                    <hr>
             <h2>criar elementos HTML pelo javaScript</h2>
                 <br>
                 <p>sintaxe: <code class="codigo">const criarElemento = document.createEelement('element HTML')</code></p>
@@ -354,14 +365,13 @@
                     
                     <hr>
             <h2>Eventos</h2>
-                <br>
-                <p>Eventos são interações do usuário com elementos html, invocando uma <i>Rotina JavaScripit</i>, em resposta ao mesmo específicado.</p>
+                <p>Os eventos em JavaScript são ações ou ocorrências que acontecem no navegador, como cliques de mouse, pressionamento de teclas, movimentação do mouse, carregamento da página e muito mais. Eles permitem que você interaja com os usuários e adicione dinamismo às suas páginas web.</p>
                 <p>sintaxe de evento disparado <b>diretamente no documento HTML:</b></p>
                 <code class="codigo">onclick="alert("olá mundo!")"</code>
                 <blockquote>
                     <p><b>ONclick - </b>Quando o evento comçar com <i>on</i> o método é inserido diretamente no HTML  <i>(não recomendado)</i></p>   
                 </blockquote>
-                <br>
+                <hr>
                 <h3>EventListener</h3>
                     <p>Ouvidores de eventos que disparam funções.</p>
                     <p>sintaxe do método de ouvidores <b>chamando uma função já declarada:</b> </p>
@@ -383,7 +393,8 @@
                     <p><b>const el= evt.target --- </b>atribuir o elemento capturado a uma variável, assim, permitindo a manipulação do elemento.</p>
                     <blockquote>
                         <p>caso esteja trabalhando com Array, utilize o método map() para percorrer os elementos, assim, possibilitando a manipulação.</p>
-                    </blockquote> 
+                    </blockquote>
+                    <hr>
                 <h3>Tipos de eventos:</h3>
                     <h4>Mouse</h4>
                         <p>toda ação que ocorre com mouse ao ter contato com uma função já nomeada. Para mais <i>eventos de mouse</i><a href="https://desenvolvimentoparaweb.com/javascript/eventos-javascript/" target="_blank" rel="external"> Clique aqui!</a></p>
@@ -391,12 +402,17 @@
                         <p><code>'mousemove'</code> --- Sempre que o cursor do mouse se move sobre um elemento. <!-- (? dentro da div?) --></p>
                         <p><code>'mouseenter' / 'mouseover'</code> --- Quando o cursor do mouse entra nos limites de um elemento.</p>
                         <p><code>'mouseout'</code> --- Quando o cursor do mouse se move para fora do limite de um elemento.</p>
-                <h3>métodos Eventos</h3>
-                    <p>são funções prontas com objetivo de trabalhar com os eventos</p>
-                    <p><code>evento.stopPropagation() --- </code> método que neutraliza a propagação do evento aos seus <i>childs</i>, contudo, obtém melhor controle de quem dispara o evento.</p>
+                        <hr>
+                <h3>stopPropagation</h3>
+                    <div id="div_stopPropagation">
+                        <p class="codigo">evt.stopPropagation()</p>
+                        <p>usado para evitar que um evento continue se propagando na cadeia de eventos. Em outras palavras, ele impede que o evento "suba" ou "desça" para outros elementos pais ou filhos que possuam um manipulador para o mesmo evento.</p>
+                        <blockquote id="citacao_stopPropagation">
+                            <p>para efetuar o evento <i>stopPropagation,</i> deve caprturar o elemento desejado e criar um evento de stopPropagation()</p>
+                        </blockquote>
+                    </div>
             <h2>Arrays</h2>
-                <p><strong>Array ,Vetores ou variável composta</strong>, são uma estrutura de dados que serve para guardar <i>elementos</i> em um espaço da memória. Estes espaços da memória são chamados de variáveis.</p>
-                <br>
+                <p class=""><strong>Array ,Vetores ou variável composta</strong>, são uma estrutura de dados que serve para guardar <i>elementos</i> em um espaço da memória. Estes espaços da memória são chamados de variáveis.</p>
                 <p><strong>Elementos --- </strong> é composto por <i>espaço da memória, valor e índice</i> </p>
                 <p><strong>Índice ---</strong> também conhecido como <i>chave ou Key</i></p>
                 <p><strong>Valor --- </strong> conteúdo armazenado dentro dos elentos.</p>
