@@ -360,9 +360,7 @@
                     </blockquote>
                     <p><code>.appendChild( ) --- </code>anexar um elemento filho ao 'Parent' desejado.</p>
                     <p><code>.removeChild( ) ---</code>remover elemento filho em relação ao elemento 'Parent' (utilizar no    evento de click)</p>
-                    <p><code>.remove() --- </code> remover elemento diretamente pela variável atribuída.</p>
-                    <p><code>.toUpperCase() ---</code>Converte uma string para todas as letras maiúsculas; este método não altera seu valor original, apenas retorna uma outra string com caracteres maíusculs. </p>
-                    
+                    <p><code>.remove() --- </code> remover elemento diretamente pela variável atribuída.</p>            
                     <hr>
             <h2>Eventos</h2>
                 <p>Os eventos em JavaScript são ações ou ocorrências que acontecem no navegador, como cliques de mouse, pressionamento de teclas, movimentação do mouse, carregamento da página e muito mais. Eles permitem que você interaja com os usuários e adicione dinamismo às suas páginas web.</p>
@@ -432,6 +430,7 @@
                     <p><code class="codigo">const numeros=[1, 2, 3, 4, 5, 6, 7]</code></p>
                     <p><code class="codigo">const numerosPares= numeros.filter((callback)=>{function}) </code></p>
                     <blockquote>
+                        <p><b>Obsereve</b> que o método <i>filter</i> está sendo atribuído a uma nova constante, onde será armazenado os novos valores.</p>
                         <p>há diferentes formas de criar uma função com método .filter(), o <i>'callback'</i>, poderia ser uma função separada.</p>
                         <p>neste caso, foi utilizado uma ArrowFunction diretamente no .filter()</p>
                     </blockquote>
@@ -446,11 +445,19 @@
                         <p>neste caso, foi utilizado uma ArrowFunction diretamente no .find()</p>
                     </blockquote>
                     <p>O método .find() é utilizado para retornar o primeiro valor satisfeito na operação desejada, caso não encontrado, retorna <b>undefined</b>.</p>
+                    <hr>
                 <h3>.every( )</h3>
                     <p>O método .every() usado para testar se todos os elementos de um array satisfazem uma determinada condição. caso seja satisfeito, retorna <b>True</b>; caso não satisfaça, retorna <b>False</b>.</p>
+                    <blockquote id="citacao_every"">
+                        <p>Além de ser um método que retorna valor booleano, é posivel identificar qual elemento e índice que não satisfaça a condição .every(), imprimindo em um <b>elemento.innerHTML</b>.</p>
+                    </blockquote>
+                    <hr>
                 <h3>.some( )</h3>
                     <p>O método .some() verifica se pelo menos um dos elementos de um array atende a uma condição especificada. caso satisfeito, retorna <b>True</b>, caso não satisfaça, retorna <b>False</b>. </p>
-                    <br>
+                    <blockquote id="citacao_some">
+                        <p>Além de ser um método que retorna valor booleano, é posivel identificar qual elemento e índice que satisfaça a condição .some(), imprimindo em um <b>elemento.innerHTML.</b></p>
+                    </blockquote>
+                    <hr>
                 <h3>.reduce( )</h3>
                     <p>O método .reduce() executa uma função de callback para cada elemento de um array, resultando em um único valor de retorno.</p>
                     <blockquote>
