@@ -415,6 +415,16 @@
                 <p><strong>Índice ---</strong> também conhecido como <i>chave ou Key</i></p>
                 <p><strong>Valor --- </strong> conteúdo armazenado dentro dos elentos.</p>
                 <hr>
+                <h3>Iteradores</h3>
+                    <p>Iteradores são estruturas de repetição que percorrem os elementos de um Array, permitindo a manipulação de cada elemento individualmente. Existem várias formas de iterar sobre um Array em JavaScript, cada uma com suas características e usos específicos.</p>
+                    <p><code>array[Symbol.iterator]</code> é uma maneira de acessar o iterador padrão de um array.</p>
+                    <p><code>const it_array = array[Symbol.iterator]()</code></p>
+                    <blockquote id="citacao_symbol.iterator">
+                        <p>Um iterador é um objeto que permite percorrer elementos de uma coleção um por um.</p>
+                        <p>No caso de arrays, o iterador gerado por <b>[Symbol.iterator]()</b> possui um método <i>.next()</i> que retorna objetos com duas propriedades:</p> 
+                        <p>value: o próximo valor do array. <br>done: true quando todos os elementos já foram percorridos, false caso contrário.</p>
+                    </blockquote>
+                    <hr>
                 <h3>For(in or of )</h3>
                     <p>estrutura de repetição criada exclusivamente para manipulação de objetos (Arrays). Geralmente<i> optado quando precisamos de interromper</i> durante o percorrimento de um loop ou array.</p>
                     <p><code>for(n in num) --- </code> ao iterar um array, for(in) é utilizado para percorer pelo índice<i>(indice key = n)</i> elementos<i>(object = num)</i></p>
@@ -482,21 +492,27 @@
                     <p><code class="codigo">const ArrayNumeros=[[1,2,3], [4,5,6],[7,8,9]]</code></p>
                     <p><code>array[1] --- </code>forma de identificar o array na indice 1</p>
                     <p><code>array[1][2] --- </code>forma de identificar o array de indice 1 (obtem um objeto que é um outro array), obtem o elemento no indice 2.</p>
-            <h2>coleção Map</h2>
-                <P>A coleção <b>map</b> é uma estrutura composta por <b>chave-valor</b> que são muito importantes para lhe dar com coleções de dados.</P>
-                <p>sintaxe: <code class="codigo">const myMap = new Map();</code></p>
-                <p>O Map é uma coleção de pares chave-valor, onde a chave pode ser de qualquer tipo. (numero ou string)</p>
-                <blockquote>
-                    <p>º sempre que for obter um elemento, referência a <b>chave</b> do elemento para se obter o <b>valor</b></p>
-                    <p>º a chave deve ser única, ja o valor pode ser repetido.</p>
-                </blockquote>
-                <p>Ele lembra a ordem original em que os elementos foram adicionados, permitindo recuperar os dados na mesma ordem em que foram inseridos.</p>
-                <p>Funciona como uma combinação de objeto e array</p>
-                <blockquote>
-                    <p>º Como um objeto, suporta a estrutura de pares chave-valor.</p>
-                    <p>º Como um array, mantém a ordem de inserção.</p>
-                </blockquote>
-                <h3>métodos da coleção Map e Set</h3>
+            <h2>coleção iteravel</h2>
+                <h3>coleção map</h3>
+                    <P>A coleção <b>map</b> é uma estrutura composta por <b>chave-valor</b> que são muito importantes para lhe dar com coleções de dados.</P>
+                    <p>sintaxe: <code class="codigo">const myMap = new Map();</code></p>
+                    <p>O Map é uma coleção de pares chave-valor, onde a chave pode ser de qualquer tipo. (numero ou string)</p>
+                    <blockquote>
+                        <p>º sempre que for obter um elemento, referência a <b>chave</b> do elemento para se obter o <b>valor</b></p>
+                        <p>º a chave deve ser única, ja o valor pode ser repetido.</p>
+                    </blockquote>
+                    <p>Ele lembra a ordem original em que os elementos foram adicionados, permitindo recuperar os dados na mesma ordem em que foram inseridos.</p>
+                    <p>Funciona como uma combinação de objeto e array</p>
+                    <blockquote>
+                        <p>º Como um objeto, suporta a estrutura de pares chave-valor.</p>
+                        <p>º Como um array, mantém a ordem de inserção.</p>
+                    </blockquote>
+                <hr>
+                <h3>coleção set</h3>
+                    <p>O objeto Set permite     armazenar valores únicos de qualquer tipo e mantém a ordem de inserção dos elementos.</p>
+                    <p>Sintaxe: <code class="codigo">const musicas = new Set(["rock", "pagode", "funk"])</code></p>
+                <h4>métodos da coleção Map e Set</h4>
+                    <p><code>.add() ---</code> adiciona elemento na coleção.</p>
                     <p><code>.clear() --- </code> remove todos os pares chave-valor, deixando o Map completamente vazio.</p>
                     <p><code>.delete('chave') --- </code> usado para remover um par chave-valor específico de um objeto Map. Você passa a chave do elemento que deseja remover como argumento para o método .delete(). Se o Map contiver um elemento com essa chave, o elemento será removido e .delete() retornará true. Se não houver elemento com a chave especificada, nada acontecerá e .delete() retornará false.</p>       
                     <p><code>.entries() --- </code>  retorna um novo iterador de objetos Map que contém os pares chave-valor para cada elemento em ordem de inserção. Cada item do iterador é um array de dois elementos: o primeiro é a chave e o segundo é o valor correspondente.</p>   
@@ -506,10 +522,9 @@
                     <p><code>.keys() --- </code> retorna um novo iterador que contém as chaves para cada elemento em um objeto Map em ordem de inserção. Você pode usar o iterador para percorrer todas as chaves do Map. <b>Obs.:</b> é útil quando você está interessado apenas nas chaves e não nos valores do Map.</p>
                     <p><code>.values() --- </code> retorna um novo iterador que contém os valores para cada elemento em um objeto Map em ordem de inserção. Você pode usar o iterador para percorrer todos os valores do Map. <b>Obs.:</b> é útil quando você está interessado apenas nos valores e não nas chaves do Map.</p>
                     <p><code>.set('chave', 'valor') --- </code>usado para adicionar pares chave-valor ao Map. Se a chave já existir no Map, o valor anterior será substituído pelo novo valor. Se a chave não existir, um novo par chave-valor será adicionado ao Map.</p>
-                    
                     <p><code>.size --- </code> Propriedade de leitura que retorna o tamanho da coleção Map.</p>
-                    <hr>
-            <h2>Objetos</h2>
+
+                <h2>Objetos</h2>
                 <p>Objeto em JavaScript é uma variável que armazena varios dados, selecionado dentro de chaves duplas <strong>{}</strong>, e podem ter <strong>tipos de dados </strong>diferentes dentro dos atributos.</p>
                 <blockquote>
                     <p>sintaxe para criar um objeto:</p>
